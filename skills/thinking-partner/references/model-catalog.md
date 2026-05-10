@@ -846,111 +846,136 @@ Etik açıdan da, risk üreten kişi riskin sonucuna ortak olmalıdır.
 
 ## İstihbarat, Güç ve Gizli Operasyonlar
 
-### Stratejik Aldatma (Deception Architecture)
-Hedefin algısını kontrol etmek için gerçek niyeti, kapasiteyi veya konumu kasıtlı olarak gizlemek ya da yanlış yönlendirmek.
-**Ne zaman kullanılır:** Müzakerede gerçek pozisyonu maskelemek, rakibin beklentilerini yönetmek veya asimetrik çatışmada hayatta kalmak gerektiğinde.
-**Ana soru:** "Karşı tarafın gerçek niyetim hakkında ne bilmesini istiyorum — ve bu algıyı nasıl şekillendiriyorum?"
+> **Okuma çerçevesi:** Bu bölümdeki modeller, bir şeyin *nasıl yapıldığını* değil, *yapıldığını nasıl tespit ettiğimizi* gösterir. Her model üç katmanda okunur: içeriden nasıl hissettiriyor, dışarıdan hangi izi bırakıyor, ve efektten sebebe nasıl geriye gidilir.
 
-### Bilgi Asimetrisi Silahı
-Bir tarafın diğerinden daha fazla veya farklı türde bilgiye sahip olması durumundan bilinçli yararlanmak.
-**Ne zaman kullanılır:** Piyasa, müzakere veya çatışma ortamlarında güç dengesizliklerini okurken.
-**Ana soru:** "Bu sahada kim ne biliyor — ve bu bilgi boşluğu kimin lehine işliyor?"
+### Stratejik Aldatma Tespiti
+Gerçek niyet, kapasite veya pozisyonun kasıtlı olarak gizlendiği durumlarda aldatmanın bıraktığı izleri okumak.
+**İçeriden his:** Sana verilen bilgi her şeyi açıklıyor ama bir yerde "peki bu neden böyle?" sorusu hep yanıtsız kalıyor. Tutarlı görünen resmin içinde açıklanamayan bir boşluk var.
+**Bıraktığı iz:** Açıklanan eylem ile çıkan sonuç arasındaki fark sistematik. Hata değil, desen. Her seferinde aynı taraf kazanıyor, ama "talihsizlik" gibi sunuluyor.
+**Tanı sorusu:** "Bu kişinin/yapının söyledikleri ile yaptıkları arasında sürekli bir açı farkı var mı — ve bu fark her seferinde aynı yönde mi?"
 
-### Bölümlendirme (Compartmentalization)
-Bilgi ve operasyonu, her aktörün yalnızca kendi parçasını gördüğü izole hücrelere ayırmak.
-**Ne zaman kullanılır:** Hassas operasyonları korurken, sızıntı riskini minimize ederken veya çöküşü kontrol altında tutarken.
-**Ana soru:** "Bu yapıda kimin neyi bilmesi gerekiyor — ve bilgi akışını nerede kesmem şart?"
+### Bilgi Asimetrisi Tespiti
+Bir tarafın bilerek bilgi tuttuğu, sızdırdığı veya kirlettiği bir ortamda kimin ne bildiğini ve bu boşluğun kimin lehine işlediğini görünür kılmak.
+**İçeriden his:** Karar almak için ihtiyaç duyduğun bilgiye sürekli "zamanlaması iyi değil", "henüz netleşmedi", "sana döneceğim" cevapları geliyor. Bilgi akışı sana doğru değil, senden uzağa doğru.
+**Bıraktığı iz:** Aynı ortamda bazı aktörler önceden pozisyon alıyor. Sen sürpriz yaşarken onlar hazır. Bu tesadüf değil, erken uyarı almış olmanın belirtisi.
+**Tanı sorusu:** "Bu ortamda kim sürpriz yaşıyor, kim yaşamıyor — ve bu farkın açıklaması ne olabilir?"
 
-### Etki Operasyonu Çerçevesi
-Bir hedef kitlenin inançlarını, davranışlarını veya kararlarını dolaylı yollarla şekillendiren uzun vadeli müdahale stratejileri.
-**Ne zaman kullanılır:** Bir anlatıyı şekillendirmek, bir topluluğun görüşünü yavaşça kaydırmak veya bir karar alma sürecini dışarıdan etkilemek gerektiğinde.
-**Ana soru:** "Bu kitleyi doğrudan değil, hangi dolaylı kanallar ve zaman dilimi üzerinden etkilemek mümkün?"
+### Bölümlendirme İzleri (Compartmentalization Signatures)
+Bir yapının bilgiyi kasıtlı olarak hücrelere böldüğünü — her aktörün sadece kendi parçasını gördüğünü — gösteren örüntüleri tespit etmek.
+**İçeriden his:** "Bütünü gören var mı?" sorusuna net cevap alamıyorsun. Herkes kendi parçasından emin ama kimse genel resmi görmüyor. Bu yapısal bir kaza değil, tasarım.
+**Bıraktığı iz:** Koordinasyon ihtiyacı olduğunda bilgi akışı çok dar bir boğazdan geçiyor ve o boğazı tek bir aktör kontrol ediyor. Şeffaflık taleplerine "bu senin alanın değil" yanıtı geliyor.
+**Tanı sorusu:** "Bu yapıda bütünü kim görüyor — ve bu kişi bütünü görmememi kasıtlı olarak mı sağlıyor?"
 
-### Kanlı Eller (Plausible Deniability)
-Operasyonel bir eylemi, karar vericinin buna açıkça onay vermediğini inandırıcı biçimde iddia edebileceği şekilde yapılandırmak.
-**Ne zaman kullanılır:** Yüksek riskli eylemleri yetkilendirirken doğrudan sorumluluktan kaçınmak için.
-**Ana soru:** "Bu eylem başarısız olursa, zincirin hangi halkasında duracak — ve o halka gerçekten izole mi?"
+### Etki Operasyonu Belirtileri
+Bir kitlenin ya da bireyin görüş ve kararlarının dolaylı, uzun vadeli ve izini bulmakta güç bir müdahaleyle şekillendirildiğini tespit etmek.
+**İçeriden his:** Fikrin ne zaman değiştiğini hatırlamıyorsun ama "zaten hep böyle düşünüyordum" hissi var. Kendi görüşün gibi hissettiren ama dışarıdan eklenmiş bir inanç.
+**Bıraktığı iz:** Çevrendeki insanların görüşleri birbirinden bağımsız gibi görünüyor ama hepsi aynı yönde kayıyor. Kaymanın kaynağı belirli, söylemi belirli birkaç kanal.
+**Tanı sorusu:** "Bu fikri kendi başıma mı ürettim — yoksa bu fikir bana belirli bir dönemde, belirli kanallar üzerinden sistematik olarak mı ulaştı?"
 
-### HUMINT Değerlendirme Çerçevesi (İnsan İstihbaratı)
-Bir kaynağın motivasyonunu, erişimini, güvenilirliğini ve potansiyel kompromisini sistematik olarak değerlendirmek.
-**Ne zaman kullanılır:** İnsan kaynaklarından gelen bilgiyi değerlendirirken; güvenilirlik ve sadakat sorgulanırken.
-**Ana soru:** "Bu kişinin söylediklerini doğrulayan başka ne var — ve neden bunu bana söylüyor?"
+### Makul İnkâr Edilebilirlik İzleri (Plausible Deniability)
+Bir kararın ya da eylemin gerçek sorumlusunu bulmak için zincirin nasıl kasıtlı olarak bulanıklaştırıldığını okumak.
+**İçeriden his:** Kötü bir şey oldu ama "sorumlu kim?" sorusu hiçbir somut kişiye işaret etmiyor. Herkes bir üstünü gösteriyor; hiçbir yetki belgesi yok.
+**Bıraktığı iz:** Zarar verici kararlar resmi belgeler olmadan, sözlü talimatla ya da "anlayış" üzerinden yürütülmüş. İz var ama zincir kopuk.
+**Tanı sorusu:** "Bu kararın belgeli bir sahibi var mı — yoksa sorumluluk sistematik olarak bulanıklaştırılmış mı?"
 
-### Sinyal-Gürültü Ayrımı (Intelligence Filtering)
-Ham bilgi akışından gerçek sinyal olan veriyi, yanıltıcı gürültüden ve kasıtlı dezenformasyondan ayırt etmek.
-**Ne zaman kullanılır:** Yüksek hacimli, çelişkili veya kasıtlı olarak kirletilmiş bilgi ortamlarında karar alırken.
-**Ana soru:** "Bu bilginin kaynağı kim, güdüsü ne — ve bu bana ulaştıysa neden?"
+### Kaynak Güvenilirliği Tespiti (HUMINT Okuma)
+Sana bilgi veren kişinin gerçekten bağımsız mı, yoksa başka bir aktörün sızıntı kanalı mı olduğunu anlamak.
+**İçeriden his:** Kaynak iyi niyetli görünüyor ama verdiği bilgiler hep belli bir aktörün lehine çıkan sonuçlara yol açıyor. Tesadüf çok fazla.
+**Bıraktığı iz:** Kaynağın sana aktardığı bilgilerin kimin çıkarına hizmet ettiğine bak. Eğer fayda sistematik olarak tek taraflıysa, kaynak tarafsız değildir.
+**Tanı sorusu:** "Bu kişiden aldığım bilgiler, hangi aktörün pozisyonunu sürekli olarak güçlendiriyor?"
 
-### Asimetrik Kaldıraç (Leverage Under Asymmetry)
-Daha güçlü bir aktöre karşı orantısız etkisi olan kaynakları, bilgileri veya konumları tespit edip aktive etmek.
-**Ne zaman kullanılır:** Kaynak, sayı veya güç bakımından dezavantajlı konumdayken.
-**Ana soru:** "Rakibimin hassasiyetleri nerede — ve benim en küçük hamlem onun en büyük kaybını nasıl tetikler?"
+### Dezenformasyon Tespiti (Sinyal-Gürültü Ayrımı)
+Kasıtlı olarak kirletilmiş bilgi ortamında, gerçek sinyali gürültüden ve sistematik yanlışlamadan ayırt etmek.
+**İçeriden his:** Bilgiye ulaşmak mümkün ama her ulaştığında yeni bir çelişki çıkıyor. Kesinleştiğini sandığın şey sürekli sarsılıyor. Bu bilişsel yorgunluk değil, tasarlanmış bir durum.
+**Bıraktığı iz:** Yanlış olan bilgiler rastgele hata değil, stratejik yönlü hata. Seni belirli kararlardan uzaklaştırıyor ya da belirli kararlar için hazırlıyor.
+**Tanı sorusu:** "Bu ortamdaki hataların yönü rastgele mi — yoksa hepsi benim belirli bir sonuca ulaşmamı engelliyor mu?"
 
-### Derin Kaplama (Legend Building)
-Uzun vadeli, tutarlı ve doğrulanabilir bir kimlik veya anlatı kurgusunu zaman içinde inşa etmek.
-**Ne zaman kullanılır:** Gerçek kimlik, niyet veya konumlanmanın stratejik olarak gizlenmesi gerektiğinde.
-**Ana soru:** "Bu öykü, derin incelemeye dayanacak kadar tutarlı ve desteklenmiş mi?"
+### Asimetrik Baskı Tespiti
+Görünürde eşit bir müzakere ya da ilişkide, karşı tarafın senin farkında olmadığın bir kaldıraç kullandığını anlamak.
+**İçeriden his:** Teorik olarak "hayır" diyebilirsin ama pratikte gerçekten diyemiyorsun. Çıkış seçeneğin var gibi görünüyor ama maliyeti görünmez biçimde çok yüksek.
+**Bıraktığı iz:** Müzakereye eşit girersin, anlaşmaya asimetrik çıkarsın. Bu sürekli tekrarlanıyorsa yapısal bir kaldıraç var demektir.
+**Tanı sorusu:** "Bu ilişkide 'hayır' demek teorik olarak mümkün mü — peki fiilen ne kadar mümkün, ve bu farkı yaratan ne?"
 
-### İkili Kullanım Analizi (Dual-Use Assessment)
-Bir kapasite, bilgi veya teknolojinin hem meşru hem de istismar edici biçimde nasıl kullanılabileceğini eş zamanlı değerlendirmek.
-**Ne zaman kullanılır:** Yeni bir araç, sistem veya yetenek geliştirirken veya edinirken.
-**Ana soru:** "Bu aynı şeyi kim, hangi amaçla ve nasıl kötüye kullanır?"
+### İnşa Edilmiş Kimlik Tespiti (Legend Recognition)
+Sana ya da bir yapıya sunulan kimlik ve geçmişin gerçek mi yoksa kasıtlı olarak kurgulanmış mı olduğunu okumak.
+**İçeriden his:** Geçmişi tutarlı ama çok temiz. Bir insanın ya da yapının hikâyesinde normalde olması gereken çelişkiler, dönüş noktaları, hatalar yok. Mükemmel bir anlatı şüphelidir.
+**Bıraktığı iz:** Birbirinden bağımsız kaynaklardan gelen geçmiş bilgileri birbiriyle örtüşüyor ama hepsi aynı kaynağa dayanıyor.
+**Tanı sorusu:** "Bu kişinin ya da yapının geçmişini birbirinden bağımsız birden fazla kaynaktan doğrulayabilir miyim?"
+
+### İkili Kullanım Tespiti (Hidden Exploitation)
+Meşru görünen bir araç, kapasite veya ilişkinin aynı anda seni zayıflatan bir şekilde de kullanılıp kullanılmadığını anlamak.
+**İçeriden his:** Sana sunulan şey faydalı görünüyor ama kullandıkça bağımlılığın artıyor ya da konumun zayıflıyor. Kazandığın şeyin bedeli görünmez.
+**Bıraktığı iz:** Araç ya da ilişki zaman içinde bağımlılık yaratıyor; çıkış seçeneklerini azaltıyor; seni izlenebilir ya da savunmasız hale getiriyor.
+**Tanı sorusu:** "Bu araç ya da ilişki benim için çalışıyor — yoksa ben bu araç ya da ilişki için mi çalışıyorum?"
 
 ---
 
 ## Makyavelist Stratejiler ve Manipülasyon
 
-### Güç Dinamikleri Haritası
-Bir sistemdeki resmi ve gayriresmi güç yapılarını, kimin kime bağımlı olduğunu ve kaldıraç noktalarını görünür kılmak.
-**Ne zaman kullanılır:** Organizasyonel bir çatışmaya girerken, bir karar alma sistemine nüfuz etmeye çalışırken veya koalisyon kurarken.
-**Ana soru:** "Kâğıt üzerindeki hiyerarşi ile gerçek güç nerede ayrışıyor — ve gayriresmi otoritenin kaynağı kim?"
+> **Okuma çerçevesi:** Bu bölüm, güç ve manipülasyonun *nasıl uygulandığını* değil, *uygulandığında nasıl tespit edildiğini* gösterir. Teşhis içeriden hissedilen şey + dışarıdan gözlemlenen iz üzerinden yapılır. Soru her zaman şudur: efektlere bakarak, görünmez sebebi nasıl çıkarırız?
 
-### Çerçeveleme Silahı (Weaponized Framing)
-Aynı gerçeği, hedefin tepkisini önceden belirleyecek şekilde farklı bir referans çerçevesiyle sunmak.
-**Ne zaman kullanılır:** İkna süreçlerinde, müzakerelerde veya bir anlatıya karşı anlatı üretirken.
-**Ana soru:** "Aynı gerçeği, karşı tarafın istediğim yönde karar almasını sağlayacak hangi çerçeveyle sunabilirim?"
+### Güç Haritası Okuma
+Resmi hiyerarşinin arkasındaki gerçek güç yapısını — kimin kime gerçekten bağımlı olduğunu ve kaldıraç noktalarını — görünür kılmak.
+**İçeriden his:** Karar alma süreci resmi kanalları izliyor ama kararlar önceden belirlenmiş gibi geliyor. Toplantılar onaylamak için, tartışmak için değil.
+**Bıraktığı iz:** Unvanı olmayan birinin odaya girmesiyle tartışmanın tonu değişiyor. Resmi oy oy sayısına değil, belirli kişilerin sinyal verdiği yöne göre şekilleniyor.
+**Tanı sorusu:** "Bu yapıda gerçek kararı kim veriyor — ve bu kişi resmi karar vericilerden farklı mı?"
 
-### Böl ve Yönet
-Bir koalisyonun veya grubun içindeki çatlakları tespit edip derinleştirerek ortak bir cephe oluşturmalarını engellemek.
-**Ne zaman kullanılır:** Birleşik bir rakiple karşı karşıyayken veya birden fazla tarafın aynı anda memnuniyetini sağlamak imkânsızken.
-**Ana soru:** "Bu grubun içindeki en derin anlaşmazlık noktası nerede — ve ben bu gerilimleri nasıl beslerim?"
+### Çerçeveleme Baskısı Tespiti
+Sana sunulan bir bilginin ya da teklifin, belli bir tepkiyi önceden belirleyecek şekilde kasıtlı olarak çerçevelenip çerçevelenmediğini anlamak.
+**İçeriden his:** Seçenek net görünüyor ama sadece sunulan çerçeve içinde. "Başka türlü düşünmek" aklına gelmiyor ya da "doğal olmayan" bir çaba gerektiriyor.
+**Bıraktığı iz:** Aynı gerçeği farklı bir çerçeveyle sunsalar tepkin köklü biçimde farklı olurdu. Çerçeve, kararı önceden şekillendiriyor.
+**Tanı sorusu:** "Bu bilgi ya da teklifi farklı bir çerçeveden baksam — mesela tam tersini söylesem — tepkim değişir mi?"
 
-### Üretilmiş Konsensüs (Manufactured Consent)
-Bir görüşün geniş ve kendiliğinden bir desteğe sahipmiş gibi görünmesini sağlayacak sosyal kanıt yapısı oluşturmak.
-**Ne zaman kullanılır:** Bir kararı veya politikayı meşrulaştırmak için gerçek ya da algılanan çoğunluk desteğine ihtiyaç duyulduğunda.
-**Ana soru:** "Bu konsenüsün gerçek mi yoksa kurgulanmış mı olduğunu nasıl ayırt ederim — ve kim bu algıyı kontrol ediyor?"
+### Böl ve Yönet Tespiti
+İçinde bulunduğun bir grubun ya da koalisyonun içindeki çatlakların kasıtlı olarak büyütülüp büyütülmediğini anlamak.
+**İçeriden his:** Grupta anlaşmazlıklar artıyor ama kaynak belirsiz. Birlikte karar almak giderek daha zor oluyor. Ortak bir şeyi paylaştığınızı unutuyorsunuz.
+**Bıraktığı iz:** Çatlaklar dışarıdan besleniyor. Farklı kişilere farklı bilgiler ulaşıyor; her biri diğerinin tutarsız olduğunu düşünüyor ama kaynak aynı yerde.
+**Tanı sorusu:** "Bu grupta kim hangi bilgiyi aldı — ve farklı bilgi alanlar birbirine karşı mı konumlanıyor?"
 
-### Bağımlılık Yaratma (Dependency Engineering)
-Hedefi, senin kontrolündeki kaynaklara — bilgi, hizmet, ilişki, onay — giderek daha bağımlı hale getiren yapılar tasarlamak.
-**Ne zaman kullanılır:** Uzun vadeli bir ilişkide yapısal avantaj inşa etmek veya var olan bağımlılıkları fark edip kırmak gerektiğinde.
-**Ana soru:** "Bu ilişkide kim kime bağımlı — ve bu asimetriyi kim, nasıl sömürüyor?"
+### Üretilmiş Konsensüs Tespiti
+Geniş bir desteğin gerçek mi yoksa kurgulanmış mı olduğunu, sosyal kanıtın gerçek bir eğilimi mi yoksa tasarlanmış bir algıyı mı yansıttığını anlamak.
+**İçeriden his:** "Herkes böyle düşünüyor" baskısı var ama bu herkesi tanıyor musun? Karşı çıkmak giderek daha yalnız hissettiriyor.
+**Bıraktığı iz:** Destek görünüşte geniş ama birbirinden bağımsız değil. Aynı söylemi kullananlar aynı kaynaktan besleniyor. Organik bir çoğunluk bu kadar senkronize olmaz.
+**Tanı sorusu:** "Bu konsensüsün katılımcıları birbirinden gerçekten bağımsız mı — yoksa hepsi aynı merkezi sinyal etrafında mı şekilleniyor?"
 
-### Kontrollü Muhalefet (Controlled Opposition)
-Muhalefetin enerjisini, yönünü veya çıktısını, görünürde bağımsız ama örtük biçimde kontrollü bir kanalda tutmak.
-**Ne zaman kullanılır:** Bir fikrin veya hareketin altını oyarken; veya kendi çevrende sahte alternatif sesler inşa eden yapıları tanımaya çalışırken.
-**Ana soru:** "Bu muhalefet, sistemi gerçekten tehdit ediyor mu — yoksa sistemi meşrulaştırmaya mı hizmet ediyor?"
+### Bağımlılık Yapısı Tespiti
+Bir ilişki ya da sistemin, farkında olmadan seni çıkmaz bir bağımlılık içine çekip çekmediğini anlamak.
+**İçeriden his:** İlişkide ya da sistemde kalmak "doğal" geliyor; çıkmak ise orantısız büyük bir kayıp gibi görünüyor. Bu his zamanla büyüdü ama ne zaman başladığını hatırlamıyorsun.
+**Bıraktığı iz:** Seçeneklerin zaman içinde azaldı. Alternatiflere yatırım yapmak için fırsat çıktıkça ertelendi. Şu an alternatif yok — ama bu tesadüf değil, tasarım.
+**Tanı sorusu:** "Bu ilişki ya da sistemden çıkmak ne kadar maliyetli — ve bu maliyet organik mi birikmedi, yoksa bilerek mi yaratıldı?"
 
-### Overton Penceresi Kaydırma
-Kabul edilebilir söylemin sınırlarını zaman içinde kademeli olarak genişletmek ya da kaydırmak.
-**Ne zaman kullanılır:** Bir fikrin önce aşırı, sonra tartışmalı, ardından kabul edilebilir, nihayet norm haline gelmesini takip ederken.
-**Ana soru:** "Bu fikir şu an Overton penceresinin neresinde — ve bu sınırı kim, hangi araçlarla itmekte?"
+### Kontrollü Muhalefet Tespiti
+Sana alternatif ya da muhalif görünen bir sesin, aslında aynı güç yapısının ürünü olup olmadığını anlamak.
+**İçeriden his:** "İşte eleştiri yapan biri var" rahatlığı var ama bu eleştiri hiçbir zaman gerçek bir tehdit oluşturmuyor. Muhalefet enerjisi bir yerde kaybolup gidiyor.
+**Bıraktığı iz:** Muhalefet gürültülü ama etkisiz. Tehdit oluşturabilecek noktalara hiç gelmiyor. Sistemi meşrulaştırıyor ama değiştirmiyor.
+**Tanı sorusu:** "Bu muhalefet, sistemi gerçekten tehdit eden bir noktaya hiç ulaştı mı — yoksa her seferinde güvenli bir alanda mı kaldı?"
+
+### Overton Kayması Tespiti
+Kabul edilemez olarak gördüğün bir şeyin, farkında olmadan nasıl normal hale geldiğini geriye doğru okumak.
+**İçeriden his:** Bir yıl önce "asla" diyeceğin bir şeyi şimdi sıradan buluyorsun. Ne zaman değişti, hatırlamıyorsun. Değişim kayda değer görünmüyordu.
+**Bıraktığı iz:** Sınır kademeli olarak kaydı. Her adım küçüktü ve makul gerekçeyle geldi. Ama birleşik etki büyük.
+**Tanı sorusu:** "Bir yıl önceki ben, şu an kabul ettiğim bu şeye ne derdi — ve bu fark nasıl oluştu?"
 
 ### Sosyal Mühendislik Anatomisi
-İnsan psikolojisinin zafiyetlerini (güven, otorite, aciliyet, karşılıklılık) sistematik biçimde hedefleyen bir manipülasyon girişimini anatomize etmek.
-**Ne zaman kullanılır:** Bir ikna girişiminin meşru mu yoksa manipülatif mi olduğunu değerlendirirken; ya da kendi iletişimindeki baskı unsurlarını fark ederken.
-**Ana soru:** "Bu iletişim beni bir kısayoldan karar almaya mı itiyor — hangi psikolojik kaldıraç devreye giriyor?"
+Bir iletişim ya da teklifteki meşru ikna ile psikolojik kırılganlığı hedef alan manipülasyon arasındaki farkı tespit etmek.
+**İçeriden his:** Reddetmek garip geliyor. Aciliyet hissi var ama dışarıdan mı geliyor, içeriden mi bilemiyorsun. "Hayır" demek için izin istiyormuşsun gibi hissediyorsun.
+**Bıraktığı iz:** Güven, otorite, aciliyet, karşılıklılık veya kıtlık unsurlarından biri ya da birkaçı aynı anda tetikleniyor. Tek başına her biri meşru olabilir; hepsi birden aktifse alarm.
+**Tanı sorusu:** "Bu iletişimde karar vermeyi hızlandıran unsurlar benim için mi çalışıyor, yoksa benim düşünme süremden mi çalınıyor?"
 
-### Karanlık Üçlü Analizi (Dark Triad Dynamics)
-Narsisizm, Makyavelizm ve psikopati özelliklerinin bir aktörün davranışını nasıl şekillendirdiğini — ve bu örüntüye karşı nasıl konumlanılacağını — okumak.
-**Ne zaman kullanılır:** Yüksek çıkarlı kişisel veya kurumsal ilişkilerde, karşı tarafın empati ve normlar konusundaki sınırlarını tahmin ederken.
-**Ana soru:** "Bu kişi normları ve kural dışı maliyetleri gerçekten içselleştirmiş mi — yoksa yalnızca faydalı olduğunda mı uyuyor?"
+### Karanlık Üçlü Belirtileri (Dark Triad Okuma)
+Bir aktörün normları ve maliyetleri gerçekten içselleştirip içselleştirmediğini — yoksa yalnızca faydalı olduğunda uyup uymadığını — gözlemlemek.
+**İçeriden his:** İlişki iyi giderken her şey mükemmel. Çıkarlar çatıştığında empati aniden yoklaşıyor. Bu tutarsızlık kişisel değil, yapısal.
+**Bıraktığı iz:** Kurallara uyma fayda hesabıyla değişiyor. Gözlendiğinde farklı, gözlenmediğinde farklı davranış. Pişmanlık yerine yakalanmaktan kaçınma.
+**Tanı sorusu:** "Bu kişi aynı şeyi, hiç sonuç olmayacağını bilse de yapardı mı — ve bu soruya cevabım ne?"
 
-### İtibar Silahlaştırma (Reputation as Weapon)
-Bir aktörün kamu itibarını, öz-imajını veya sosyal konumlanmasını hem saldırı hem de savunmada stratejik araç olarak kullanmak.
-**Ne zaman kullanılır:** İtibar saldırısına karşı savunurken; veya bir rakibin meşruiyetini, itibariyle çelişen gerçekler üzerinden sorgulamak gerektiğinde.
-**Ana soru:** "Bu kişinin itibarı hangi gerçeğe dayanıyor — ve o gerçeğin nerede yalanlandığını kim biliyor?"
+### İtibar İnşası/Yıkımı Tespiti
+Birinin itibarını kasıtlı olarak kurma ya da çökertme operasyonunu, organik bir gelişmeden ayırt etmek.
+**İçeriden his:** Biri hakkında hızla güçlü bir kanı oluştu ama nereden geldiğini izleyemiyorsun. Ya da biri aniden "sorunlu" ilan edildi ama kanıt zayıf, anlatı güçlü.
+**Bıraktığı iz:** İtibar bilgisi belirli bir hızda ve belirli kanallar üzerinden yayılıyor. Organik itibar yavaş ve çok yönlü inşa edilir. Hızlı ve tek yönlü ise tasarlanmıştır.
+**Tanı sorusu:** "Bu kişi hakkındaki kanım nereden geldi — ve bu kaynağın bu kanıyı yayması kimin çıkarına?"
 
-### Kelebek Etkisi Kaldıracı (Cascade Triggering)
-Bir sistemde küçük ama stratejik bir dokunuşun zincirleme, orantısız büyüklükte etkileri tetiklediği noktaları bulmak.
-**Ne zaman kullanılır:** Sınırlı kaynaklarla maksimum sistem değişikliği yaratmak için; ya da bir rakibin hangi küçük hamlelerle dengesini kaybedebileceğini haritalandırırken.
-**Ana soru:** "Bu sistemde hangi küçük hamle, kendiliğinden büyüyen bir dalgalanmayı başlatır?"
+### Zincirleme Efekt Tespiti (Cascade Reading)
+Küçük görünen bir müdahalenin sistemde orantısız büyük efektler yaratmasının kasıtlı mı yoksa tesadüfi mi olduğunu okumak.
+**İçeriden his:** Küçük bir olay zincirleme sonuçlar getirdi. Her halka mantıklı ama başlangıç noktasına baktığında "bu kadar mı?" diyorsun.
+**Bıraktığı iz:** Tetikleyici nokta sistematik olarak seçilmiş gibi görünüyor. Kelebek tesadüfen uçmuyor; belirli bir kırılganlık noktasına doğrudan basılmış.
+**Tanı sorusu:** "Bu zincirin başlangıç noktası gerçekten rastgele miydi — yoksa bu sistemin tam neresinin kırılgan olduğunu bilen biri mi tetikledi?"
