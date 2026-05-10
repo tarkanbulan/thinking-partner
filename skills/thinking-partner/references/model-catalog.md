@@ -1,841 +1,956 @@
-# Mental Models Catalog
+# Zihinsel Modeller Kataloğu
 
-Full catalog of 150+ mental models organized by discipline. Each entry includes: what it is, when to use it, and the key diagnostic question.
+17 disipline yayılmış 150+ zihinsel modelin tam kataloğu. Her giriş üç şeyi içerir: modelin ne olduğu, ne zaman kullanılacağı ve sorması gereken ana teşhis sorusu.
 
-## Table of Contents
+## İçindekiler
 
-1. [General Thinking Tools](#general-thinking-tools)
-2. [Decision-Making](#decision-making)
-3. [Problem-Solving & Diagnostics](#problem-solving--diagnostics)
-4. [Systems & Complexity](#systems--complexity)
-5. [Physics & Engineering Analogies](#physics--engineering-analogies)
-6. [Biology & Evolution](#biology--evolution)
-7. [Economics & Strategy](#economics--strategy)
-8. [Statistics & Probability](#statistics--probability)
-9. [Psychology & Cognitive Biases](#psychology--cognitive-biases)
-10. [Communication & Persuasion](#communication--persuasion)
-11. [Creativity & Innovation](#creativity--innovation)
-12. [Learning & Personal Development](#learning--personal-development)
-13. [Time & Resource Management](#time--resource-management)
-14. [Game Theory & Competition](#game-theory--competition)
-15. [Negotiation](#negotiation)
-16. [Resilience & Antifragility](#resilience--antifragility)
-17. [Ethics & Responsibility](#ethics--responsibility)
-
----
-
-## General Thinking Tools
-
-### The Map is Not the Territory
-Our representations of reality are not reality itself. Models are always simplifications.
-**Use when**: Making assumptions based on reports, data, or secondhand information.
-**Key question**: "Where might our map of this situation diverge from what's actually happening?"
-
-### Circle of Competence
-Know the boundaries of what you know well. Play where you have an advantage.
-**Use when**: Deciding whether to act on your own judgment or seek expert advice.
-**Key question**: "Am I operating inside or outside my area of genuine expertise here?"
-
-### First Principles Thinking
-Decompose complex problems into fundamental truths and reason up from there.
-**Use when**: Existing solutions feel inadequate, conventional wisdom seems wrong, or building something new.
-**Key question**: "What do we know to be fundamentally, irreducibly true about this?"
-
-### Thought Experiments
-Test ideas in the laboratory of the mind by constructing simplified scenarios.
-**Use when**: Real-world testing is impossible, too expensive, or too slow.
-**Key question**: "What if we changed just this one variable — what would happen?"
-
-### Second-Order Thinking
-Consider the consequences of consequences. Think beyond the immediate effect.
-**Use when**: Any significant decision. Especially policy, strategy, or system changes.
-**Key question**: "And then what? What happens after the first effect plays out?"
-
-### Probabilistic Thinking
-Think in probabilities, not certainties. Assign likelihoods and update with evidence.
-**Use when**: Facing uncertainty (which is always).
-**Key question**: "What probability would I assign to this? What evidence would shift it?"
-
-### Inversion
-Instead of asking how to succeed, ask how to guarantee failure — then avoid those things.
-**Use when**: Stuck on a problem, planning a strategy, or evaluating risks.
-**Key question**: "What would guarantee failure here? Am I accidentally doing any of those things?"
-
-### Occam's Razor
-The simplest explanation that accounts for all the facts is most likely correct.
-**Use when**: Choosing between competing explanations or theories.
-**Key question**: "What's the simplest explanation that fits all the evidence?"
-
-### Hanlon's Razor
-Don't attribute to malice what can be adequately explained by incompetence or ignorance.
-**Use when**: Interpreting others' behavior, especially when feeling wronged.
-**Key question**: "Is there a non-malicious explanation for this behavior?"
-
-### Falsifiability
-A claim that cannot be proven wrong is not a useful claim. Good theories make testable predictions.
-**Use when**: Evaluating claims, theories, or arguments.
-**Key question**: "What specific observation would prove this wrong?"
-
-### All Models Are Wrong, Some Are Useful
-No model captures all of reality. The question is whether it's useful enough for the task at hand.
-**Use when**: Choosing or defending an analytical approach.
-**Key question**: "Is this model useful enough for the decision we need to make, despite its limitations?"
-
-### Chesterton's Fence
-Before removing or changing something, first understand why it exists. If you don't know the reason, you don't yet know enough to remove it.
-**Use when**: Tempted to eliminate a seemingly useless constraint, rule, process, or legacy practice.
-**Key question**: "Do I fully understand why this exists before I propose removing it?"
-
-### Entropy
-All systems tend toward disorder over time unless energy is actively invested to maintain them.
-**Use when**: Noticing quality, culture, codebases, or relationships degrading despite no obvious cause.
-**Key question**: "What is decaying right now because nobody is actively maintaining it?"
-
-### Counterfactual Thinking
-Imagining "what if" alternative scenarios to understand causation and improve future decisions.
-**Use when**: Conducting a post-mortem or trying to isolate what actually caused an outcome.
-**Key question**: "If I changed this one variable, would the outcome have been different?"
-
-### Thinking in Bets (Resulting)
-Separating decision quality from outcome quality — good decisions can produce bad outcomes and vice versa.
-**Use when**: Evaluating past decisions or calibrating whether to change your approach after a result.
-**Key question**: "Was the process sound given what I knew at the time, regardless of how it turned out?"
+1. [Genel Düşünme Araçları](#genel-düşünme-araçları)
+2. [Karar Verme](#karar-verme)
+3. [Problem Çözme ve Teşhis](#problem-çözme-ve-teşhis)
+4. [Sistemler ve Karmaşıklık](#sistemler-ve-karmaşıklık)
+5. [Fizik ve Mühendislik Benzetmeleri](#fizik-ve-mühendislik-benzetmeleri)
+6. [Biyoloji ve Evrim](#biyoloji-ve-evrim)
+7. [Ekonomi ve Strateji](#ekonomi-ve-strateji)
+8. [İstatistik ve Olasılık](#istatistik-ve-olasılık)
+9. [Psikoloji ve Bilişsel Yanlılıklar](#psikoloji-ve-bilişsel-yanlılıklar)
+10. [İletişim ve İkna](#iletişim-ve-ikna)
+11. [Yaratıcılık ve İnovasyon](#yaratıcılık-ve-inovasyon)
+12. [Öğrenme ve Kişisel Gelişim](#öğrenme-ve-kişisel-gelişim)
+13. [Zaman ve Kaynak Yönetimi](#zaman-ve-kaynak-yönetimi)
+14. [Oyun Teorisi ve Rekabet](#oyun-teorisi-ve-rekabet)
+15. [Müzakere](#müzakere)
+16. [Dayanıklılık ve Antikırılganlık](#dayanıklılık-ve-antikırılganlık)
+17. [Etik ve Sorumluluk](#etik-ve-sorumluluk)
+18. [İstihbarat, Güç ve Gizli Operasyonlar](#i̇stihbarat-güç-ve-gizli-operasyonlar)
+19. [Makyavelist Stratejiler ve Manipülasyon](#makyavelist-stratejiler-ve-manipülasyon)
 
 ---
 
-## Decision-Making
+## Genel Düşünme Araçları
 
-### Decision Matrix (Weighted Criteria)
-Score options against weighted criteria to make complex decisions more systematic.
-**Use when**: Choosing between multiple options with several important factors.
-**Key question**: "What criteria actually matter here, and how much does each one matter relative to the others?"
+### Harita Arazinin Kendisi Değildir
+Gerçekliğin temsili, gerçekliğin kendisi değildir. Her model bir sadeleştirmedir.
+**Ne zaman kullanılır:** Rapor, veri veya ikinci el bilgiye dayanarak varsayım kurarken.
+**Ana soru:** "Bu durumun haritası ile gerçekte olan şey nerede ayrışıyor olabilir?"
 
-### Pre-Mortem Analysis
-Assume the decision has already failed. Work backward to identify what went wrong.
-**Use when**: Before committing to any significant plan or decision.
-**Key question**: "It's a year from now and this failed spectacularly. What happened?"
+### Yetkinlik Çemberi
+İyi bildiğin alanın sınırlarını tanı. Avantajlı olduğun yerde oyna.
+**Ne zaman kullanılır:** Kendi yargına mı güveneceğine yoksa uzman görüşü mü alacağına karar verirken.
+**Ana soru:** "Burada gerçekten yetkin olduğum alanın içinde miyim, dışında mı?"
 
-### Regret Minimization
-Choose the option that minimizes regret over a long time horizon.
-**Use when**: Facing irreversible or high-stakes life decisions.
-**Key question**: "When I'm 80, which choice will I regret NOT making?"
+### İlk Prensiplerle Düşünme
+Karmaşık problemleri temel gerçeklere ayır ve oradan yukarı doğru düşün.
+**Ne zaman kullanılır:** Mevcut çözümler yetersiz hissettiriyorsa, geleneksel bilgelik yanlış görünüyorsa veya sıfırdan bir şey kuruluyorsa.
+**Ana soru:** "Burada en temel, daha fazla indirgenemeyen doğru nedir?"
 
-### Reversibility Test (One-Way vs Two-Way Doors)
-Distinguish between reversible and irreversible decisions. Irreversible ones deserve more analysis.
-**Use when**: Deciding how much time and analysis a decision deserves.
-**Key question**: "If this doesn't work, can I undo it easily? Or am I locked in?"
+### Düşünce Deneyleri
+Basitleştirilmiş zihinsel senaryolar kurarak fikirleri laboratuvar ortamında test etmek.
+**Ne zaman kullanılır:** Gerçek dünyada test imkânsızsa, pahalıysa ya da yavaşsa.
+**Ana soru:** "Sadece bu tek değişkeni değiştirsek ne olurdu?"
 
-### Cost-Benefit Analysis
-Systematically compare the costs and benefits of each option.
-**Use when**: Evaluating investments, projects, or resource allocation.
-**Key question**: "Do the total expected benefits outweigh the total expected costs, including hidden costs?"
+### İkinci Derece Düşünme
+Sonuçların sonuçlarını düşün. İlk etkinin ötesine geç.
+**Ne zaman kullanılır:** Her önemli kararda; özellikle politika, strateji ve sistem değişikliklerinde.
+**Ana soru:** "Peki sonra ne olacak? İlk etkiden sonra hangi dalgalar gelecek?"
 
-### Opportunity Cost
-Every choice has a cost: what you gave up by not choosing the alternative.
-**Use when**: Any resource allocation decision (time, money, attention).
-**Key question**: "What am I giving up by choosing this? What's the best alternative use of these resources?"
+### Olasılıksal Düşünme
+Kesinliklerle değil, olasılıklarla düşün. İhtimalleri ata ve kanıtla güncelle.
+**Ne zaman kullanılır:** Belirsizlik olan her durumda.
+**Ana soru:** "Buna hangi olasılığı veriyorum? Hangi kanıt bu oranı değiştirir?"
 
-### Sunk Cost Awareness
-Past costs that cannot be recovered should not influence future decisions.
-**Use when**: Deciding whether to continue or abandon a failing project.
-**Key question**: "If I hadn't already invested X, would I choose to start this today?"
+### Tersine Çevirme
+Başarıyı sormak yerine, başarısızlığı nasıl garanti edeceğini sor ve onlardan kaçın.
+**Ne zaman kullanılır:** Problemin içinde takılıp kalındığında, strateji kurarken veya risk değerlendirirken.
+**Ana soru:** "Burada başarısızlığı ne garanti eder? Farkında olmadan bunlardan birini mi yapıyorum?"
 
-### SWOT Analysis
-Map Strengths, Weaknesses, Opportunities, and Threats for a structured overview.
-**Use when**: Strategic planning, competitive analysis, project evaluation.
-**Key question**: "What internal strengths/weaknesses and external opportunities/threats shape this situation?"
+### Occam'ın Usturası
+Tüm verileri açıklayan en basit açıklama çoğu zaman en olası açıklamadır.
+**Ne zaman kullanılır:** Yarışan açıklamalar veya teoriler arasında seçim yaparken.
+**Ana soru:** "Tüm kanıtları açıklayan en basit açıklama hangisi?"
 
-### Satisficing vs Maximizing
-Sometimes "good enough" is better than "optimal" — especially for low-stakes decisions.
-**Use when**: Deciding how much effort to put into a decision.
-**Key question**: "Is the marginal improvement from more analysis worth the time and energy cost?"
+### Hanlon'ın Usturası
+Cehalet veya beceriksizlikle açıklanabilecek şeyi kötü niyetle açıklama.
+**Ne zaman kullanılır:** Özellikle kişisel olarak incinmiş hissettiğinde başkalarının davranışını yorumlarken.
+**Ana soru:** "Bu davranışın kötü niyet içermeyen bir açıklaması olabilir mi?"
 
-### Preserving Optionality
-When uncertainty is high, prefer choices that keep future options open rather than locking you in.
-**Use when**: You must act before uncertainty resolves and commitment costs are real.
-**Key question**: "Does this choice close doors I may want open later?"
+### Yanlışlanabilirlik
+Yanlışlanamayan iddia kullanışlı bir iddia değildir. İyi teoriler test edilebilir öngörüler üretir.
+**Ne zaman kullanılır:** İddia, teori veya argüman değerlendirirken.
+**Ana soru:** "Hangi somut gözlem bunu yanlış çıkarır?"
 
-### Asymmetric Risk (Convexity)
-Seek decisions where the upside is much larger than the downside — capped loss, uncapped gain.
-**Use when**: You can structure a bet where you lose small but win big.
-**Key question**: "What is the maximum I can lose versus the potential I can gain?"
+### Tüm Modeller Yanlıştır, Bazıları Faydalıdır
+Hiçbir model gerçeğin tamamını kapsamaz; önemli olan iş için yeterince yararlı olup olmamasıdır.
+**Ne zaman kullanılır:** Analitik bir yaklaşımı seçerken veya savunurken.
+**Ana soru:** "Bu model, eksiklerine rağmen elimizdeki karar için yeterince işe yarıyor mu?"
 
-### 10/10/10 Rule
-Evaluate how you will feel about this decision in 10 minutes, 10 months, and 10 years.
-**Use when**: Emotions are running high and you need temporal distance from the choice.
-**Key question**: "Will I still be glad I chose this in 10 months? In 10 years?"
+### Chesterton Çiti
+Bir şeyi kaldırmadan önce neden var olduğunu anlamalısın. Sebebi bilmiyorsan kaldırmak için henüz erken.
+**Ne zaman kullanılır:** Faydasız görünen bir kuralı, süreci, kısıtı veya miras yapıyı kaldırmak isterken.
+**Ana soru:** "Bunu kaldırmayı önermeden önce neden var olduğunu gerçekten anladım mı?"
 
-### Circle of Concern vs Circle of Influence
-Distinguish between things you care about but cannot control (concern) and things you can actually affect (influence). Focus energy on the latter.
-**Use when**: Feeling overwhelmed or anxious about external events; deciding where to spend limited energy.
-**Key question**: "Can I actually influence this, or am I spending energy on something outside my control?"
+### Entropi
+Enerji yatırılmadıkça bütün sistemler zamanla dağılmaya yönelir.
+**Ne zaman kullanılır:** Kod kalitesi, kültür, süreç ya da ilişki görünürde sebep yokken bozuluyorsa.
+**Ana soru:** "Şu anda kimsenin aktif olarak bakım yapmaması yüzünden ne çürüyor?"
 
----
+### Karşı-Olgusal Düşünme
+"Ya şöyle olsaydı?" türü alternatif senaryolar kurarak nedenselliği anlamak.
+**Ne zaman kullanılır:** Post-mortem yaparken ya da bir sonuca neyin sebep olduğunu ayıklarken.
+**Ana soru:** "Sadece bu tek değişkeni değiştirsem sonuç farklı olur muydu?"
 
-## Problem-Solving & Diagnostics
-
-### 5 Whys (Root Cause Analysis)
-Ask "why?" five times to drill past symptoms to root causes.
-**Use when**: A problem keeps recurring or the surface explanation feels incomplete.
-**Key question**: "Why did this happen?" (asked iteratively until you hit bedrock)
-
-### Fishbone Diagram (Ishikawa)
-Categorize potential causes of a problem into major categories (people, process, technology, environment, etc.).
-**Use when**: A problem has many possible causes and you need to explore systematically.
-**Key question**: "What are ALL the possible categories of causes for this problem?"
-
-### Constraint Analysis (Theory of Constraints)
-Every system has a bottleneck. Improving anything other than the bottleneck is waste.
-**Use when**: A system or process isn't performing as expected.
-**Key question**: "What is the ONE constraint that, if removed, would have the biggest impact?"
-
-### Reframing
-Change the frame of the problem to reveal new solutions.
-**Use when**: Stuck, or when the obvious framing leads to no good options.
-**Key question**: "What if this isn't actually the problem? What if the real problem is...?"
-
-### Fault Tree Analysis
-Work backward from an undesired outcome through all possible causes using AND/OR logic.
-**Use when**: Safety-critical analysis or complex failure investigation.
-**Key question**: "What combination of failures would be necessary to produce this outcome?"
-
-### Force Field Analysis
-Identify forces pushing toward change and forces resisting it. Strengthen drivers or weaken resistors.
-**Use when**: Planning change initiatives or understanding why something isn't moving.
-**Key question**: "What forces are pushing for this change, and what forces are resisting it?"
-
-### MECE Decomposition
-Break a problem into parts that do not overlap (Mutually Exclusive) and together cover the entire problem space (Collectively Exhaustive).
-**Use when**: A problem is large and messy and you need a structured, gap-free map of it.
-**Key question**: "Are my categories overlapping or leaving gaps?"
-
-### Hypothesis-Driven Problem Solving
-Start with a tentative answer (hypothesis), then design the fastest test to confirm or kill it.
-**Use when**: Data collection is expensive and you need to converge quickly rather than boil the ocean.
-**Key question**: "What is the single most informative test I can run right now to prove or disprove my hypothesis?"
-
-### Bright Spots Analysis
-Instead of analyzing what is broken, find where things are already working and replicate those conditions.
-**Use when**: The problem seems overwhelming, but isolated successes already exist somewhere in the system.
-**Key question**: "Where is this already working, and what is different there?"
-
-### Local vs Global Optima
-A solution can be the best available within a narrow range (local optimum) while a far better solution exists if you widen the search space.
-**Use when**: Incremental improvements stall or you suspect you're optimizing a mediocre approach.
-**Key question**: "Am I stuck making the best of a mediocre approach when a fundamentally different one might be far better?"
+### Bahis Mantığıyla Düşünme
+Karar kalitesi ile sonuç kalitesini ayırmak; iyi karar kötü sonuç verebilir, kötü karar da iyi sonuç verebilir.
+**Ne zaman kullanılır:** Geçmiş kararı değerlendirirken veya bir sonuca bakıp tüm yaklaşımı değiştirmeyi düşünürken.
+**Ana soru:** "O anda bildiklerimle süreç sağlam mıydı, sonuç ne çıkarsa çıksın?"
 
 ---
 
-## Systems & Complexity
+## Karar Verme
 
-### Feedback Loops
-Positive (reinforcing) loops amplify; negative (balancing) loops stabilize. Most systems have both.
-**Use when**: Understanding why something is accelerating or why it's stuck in equilibrium.
-**Key question**: "Is this a reinforcing loop (more leads to more) or a balancing loop (growth triggers correction)?"
+### Karar Matrisi (Ağırlıklı Kriterler)
+Seçenekleri ağırlıklı kriterlere göre puanlayarak karmaşık kararları sistematikleştirir.
+**Ne zaman kullanılır:** Birden çok önemli faktörü olan çok seçenekli kararlarda.
+**Ana soru:** "Burada hangi kriterler gerçekten önemli ve hangisinin ağırlığı ne?"
 
-### Emergence
-System-level properties that arise from interactions of parts but aren't present in any individual part.
-**Use when**: The behavior of a group or system seems unexplainable by looking at components in isolation.
-**Key question**: "What behavior is emerging from the interaction of parts that no single part exhibits?"
+### Ön-Mortem Analizi
+Kararın çoktan başarısız olduğunu varsay ve geriye doğru nedenlerini çıkar.
+**Ne zaman kullanılır:** Her önemli plan veya karar öncesinde.
+**Ana soru:** "Bir yıl sonra bu büyük bir başarısızlık olduysa ne ters gitmiş olabilir?"
 
-### Leverage Points
-Places in a system where a small intervention produces disproportionate results.
-**Use when**: Resource-constrained and need maximum impact.
-**Key question**: "Where in this system would a small push produce the largest change?"
+### Pişmanlığı En Aza İndirme
+Uzun zaman ufkunda pişmanlığı en aza indirecek seçimi yap.
+**Ne zaman kullanılır:** Geri dönüşü zor veya yüksek etkili yaşam kararlarında.
+**Ana soru:** "80 yaşımda geriye baktığımda hangisini denememiş olmaktan daha çok pişman olurum?"
 
-### Unintended Consequences (Goodhart's Law, Cobra Effect)
-When a measure becomes a target, it ceases to be a good measure. Interventions create side effects.
-**Use when**: Designing incentives, metrics, policies, or any system intervention.
-**Key question**: "If people optimize for exactly this metric/incentive, what perverse behavior might emerge?"
+### Geri Döndürülebilirlik Testi (Tek Yönlü ve Çift Yönlü Kapılar)
+Kararın geri döndürülebilir olup olmadığını ayır. Geri dönülmez karar daha çok analiz ister.
+**Ne zaman kullanılır:** Bir kararın ne kadar düşünmeyi hak ettiğini belirlerken.
+**Ana soru:** "Bu işlemezse kolayca geri döner miyim, yoksa kilitlenir miyim?"
 
-### Complex Adaptive Systems
-Systems where agents adapt to each other, making the system unpredictable from individual behavior.
-**Use when**: Dealing with markets, organizations, ecosystems, or any system with adaptive agents.
-**Key question**: "How will the other agents in this system adapt to my action?"
+### Maliyet-Fayda Analizi
+Her seçeneğin maliyetlerini ve getirilerini sistematik olarak karşılaştırır.
+**Ne zaman kullanılır:** Yatırım, proje ve kaynak tahsisi kararlarında.
+**Ana soru:** "Beklenen toplam fayda, gizli maliyetler dâhil toplam maliyeti aşıyor mu?"
 
-### Bottleneck Analysis
-The throughput of any chain is limited by its weakest link.
-**Use when**: Optimizing processes, supply chains, or workflows.
-**Key question**: "What single point is limiting the output of this entire system?"
+### Fırsat Maliyeti
+Her seçimin bir bedeli vardır: seçmediğin en iyi alternatif.
+**Ne zaman kullanılır:** Zaman, para ve dikkat gibi sınırlı kaynağı tahsis ederken.
+**Ana soru:** "Bunu seçerek aslında neden vazgeçiyorum?"
 
-### Stocks and Flows
-The structure of accumulations (stocks) and rates of change (flows) that define a system's state over time.
-**Use when**: You need to understand why a situation is getting better or worse despite interventions (e.g., employee churn, technical debt, cash reserves).
-**Key question**: "What is accumulating or depleting here, and what controls the rate?"
+### Batık Maliyet Farkındalığı
+Geri kazanılamayan geçmiş maliyetler, gelecekteki kararı belirlememelidir.
+**Ne zaman kullanılır:** Başarısız giden bir projeyi sürdürüp sürdürmemeye karar verirken.
+**Ana soru:** "Bugüne kadar yatırım yapmamış olsaydım, buna bugün yine başlar mıydım?"
 
-### Delays
-Time lags between an action and its observable effect, which cause oscillation and overshoot in systems.
-**Use when**: A system seems unresponsive to corrections, or responses keep overshooting the target.
-**Key question**: "How long before the effect of this action becomes visible, and are we likely to over-correct in the meantime?"
+### SWOT Analizi
+Güçlü yönler, zayıflıklar, fırsatlar ve tehditler üzerinden durumu yapılandırır.
+**Ne zaman kullanılır:** Stratejik planlama, rekabet analizi ve proje değerlendirmesinde.
+**Ana soru:** "Bu durumda içsel güçlü/zayıf taraflar ile dışsal fırsat/tehditler neler?"
 
-### Critical Mass / Tipping Points
-A threshold after which a system's behavior shifts non-linearly and often irreversibly.
-**Use when**: Growth is slow and you need to judge whether you are approaching a threshold that will change the dynamics entirely.
-**Key question**: "Is there a threshold beyond which the system flips to a new regime?"
+### Yeterince İyi ile En İyi Arasında Seçim
+Bazı durumlarda "yeterince iyi", "en iyi" arayışından daha rasyoneldir.
+**Ne zaman kullanılır:** Düşünme süresinin kararın değerine oranını ayarlarken.
+**Ana soru:** "Burada biraz daha iyi sonucun marjinal kazancı, ek zaman ve enerjiye değer mi?"
 
-### Hysteresis / Path Dependence
-A system's current state depends on its history; the same inputs can produce different outputs depending on what came before.
-**Use when**: Assuming a problem is reversible — undoing damage may require far more effort than causing it.
-**Key question**: "Can we actually reverse this, or has the system locked into a new path?"
+### Seçenekliliği Korumak
+Belirsizlik yüksekse gelecekteki kapıları açık bırakan tercihler öne çıkar.
+**Ne zaman kullanılır:** Belirsizlik çözülmeden hareket etmek zorundaysan.
+**Ana soru:** "Bu seçim ileride isteyebileceğim hangi kapıları kapatıyor?"
 
-### Antifragility
-Beyond resilience: some systems actually improve when exposed to stressors, volatility, and disorder.
-**Use when**: Deciding whether to shield a system from stress or deliberately expose it to controlled doses.
-**Key question**: "Does this system get stronger from shocks, or just survive them?"
+### Asimetrik Risk (Dışbükeylik)
+Kaybın sınırlı, kazancın açık uçlu olduğu kararları aramak.
+**Ne zaman kullanılır:** Küçük kayıp karşılığında büyük kazanç ihtimali kurabildiğinde.
+**Ana soru:** "En fazla ne kaybederim ve potansiyel olarak ne kazanırım?"
 
----
+### 10/10/10 Kuralı
+Kararı 10 dakika, 10 ay ve 10 yıl sonrasından düşünür.
+**Ne zaman kullanılır:** Duygular yüksekken zaman mesafesi yaratmak gerektiğinde.
+**Ana soru:** "10 ay ve 10 yıl sonra bu karardan memnun olur muyum?"
 
-## Physics & Engineering Analogies
-
-### Inertia
-Objects (and habits, organizations, beliefs) resist changes to their current state.
-**Use when**: Trying to understand resistance to change or why momentum matters.
-**Key question**: "What inertia is keeping this in its current state? How much force is needed to shift it?"
-
-### Activation Energy
-The initial energy required to start a reaction or change. Once started, it often sustains itself.
-**Use when**: Understanding why things don't change even when change is beneficial.
-**Key question**: "What's the activation energy to get this started? Can I lower the barrier?"
-
-### Friction and Viscosity
-Resistance that slows motion. Reducing friction is often more effective than adding force.
-**Use when**: Something is harder than it should be, or adoption is slow.
-**Key question**: "What friction is slowing this down? Can I remove it instead of pushing harder?"
-
-### Leverage
-A small force applied at the right point produces a large effect.
-**Use when**: Looking for force multipliers in any domain.
-**Key question**: "Where can I apply effort to get disproportionate results?"
-
-### Velocity (Speed + Direction)
-Speed alone is meaningless without direction. Efficiency on the wrong path is still failure.
-**Use when**: Evaluating progress or productivity.
-**Key question**: "Are we moving fast in the right direction, or just moving fast?"
-
-### Margin of Safety
-Build in buffers because things don't go as planned.
-**Use when**: Engineering, financial planning, project planning, or any situation with uncertainty.
-**Key question**: "If our assumptions are wrong by 20-30%, does this plan still work?"
-
-### Redundancy
-Critical systems need backup. Single points of failure are dangerous.
-**Use when**: Designing systems, processes, or plans where failure is costly.
-**Key question**: "What happens if this single component fails? Is there a backup?"
-
-### Catalysts
-Something that accelerates change without being consumed. A person, technology, or event that lowers activation energy.
-**Use when**: Looking for ways to speed up change.
-**Key question**: "What catalyst could accelerate this process?"
-
-### Resonance
-Small, well-timed inputs can produce outsized effects when they match a system's natural frequency.
-**Use when**: Timing a message, initiative, or intervention for maximum impact.
-**Key question**: "Am I pushing at the natural frequency of this system, or fighting against it?"
-
-### Half-Life / Decay
-The rate at which something loses potency, relevance, or value over time.
-**Use when**: Evaluating how long information, skills, or advantages remain useful.
-**Key question**: "What is the half-life of this knowledge, asset, or advantage?"
+### Endişe Çemberi ve Etki Çemberi
+Önemsediğin ama etkileyemediğin şeyler ile gerçekten etkileyebileceğin şeyleri ayır.
+**Ne zaman kullanılır:** Dış olaylar karşısında bunalmış veya kaygılıyken.
+**Ana soru:** "Bunu gerçekten etkileyebiliyor muyum, yoksa etkileyemediğim şeye enerji mi harcıyorum?"
 
 ---
 
-## Biology & Evolution
+## Problem Çözme ve Teşhis
 
-### Natural Selection
-Traits that improve fitness in a given environment are preserved. What works survives.
-**Use when**: Understanding competition, markets, ideas, or organizational survival.
-**Key question**: "What selection pressure is operating here? What traits does the environment reward?"
+### 5 Neden (Kök Neden Analizi)
+Belirtiden kök nedene inmek için art arda "neden?" sorusu sorar.
+**Ne zaman kullanılır:** Problem tekrar ediyorsa veya yüzeydeki açıklama yetersizse.
+**Ana soru:** "Bu neden oldu?" (gerekirse tekrar tekrar)
 
-### The Red Queen Effect
-You must keep running just to stay in place. Competitors adapt, so standing still is falling behind.
-**Use when**: Evaluating competitive strategy or personal development.
-**Key question**: "If I stop improving, how quickly do I fall behind?"
+### Balık Kılçığı Diyagramı (Ishikawa)
+Sorunun olası nedenlerini insan, süreç, teknoloji, çevre gibi kategorilere ayırır.
+**Ne zaman kullanılır:** Birden çok olası neden varsa ve sistematik tarama gerekiyorsa.
+**Ana soru:** "Bu sorunun tüm neden kategorileri nelerdir?"
 
-### Ecosystems Thinking
-Nothing exists in isolation. Every action affects a web of interconnected actors.
-**Use when**: Considering the ripple effects of actions on stakeholders, markets, or communities.
-**Key question**: "Who else is in this ecosystem, and how will they be affected by and respond to this?"
+### Kısıt Analizi (Kısıtlar Teorisi)
+Her sistemin bir darboğazı vardır; darboğaz dışındaki iyileştirme çoğu zaman israftır.
+**Ne zaman kullanılır:** Bir süreç beklendiği kadar iyi çalışmıyorsa.
+**Ana soru:** "Eğer kaldırılırsa en büyük etkiyi yaratacak tek gerçek kısıt nedir?"
 
-### Adaptation
-Continuous adjustment to changing conditions. What worked before may not work now.
-**Use when**: Something that used to work has stopped working, or the environment is shifting.
-**Key question**: "Has the environment changed in ways that make our current approach less effective?"
+### Yeniden Çerçeveleme
+Problemin çerçevesini değiştirerek yeni çözüm alanları açar.
+**Ne zaman kullanılır:** Tıkandığında veya mevcut çerçeve sadece kötü seçenekler üretiyorsa.
+**Ana soru:** "Ya asıl problem bu değilse? Ya gerçek problem başka bir şeyse?"
 
-### Alloying (Combination Effects)
-Combining elements produces properties none have individually. Diversity creates strength.
-**Use when**: Building teams, combining skills, or designing strategies.
-**Key question**: "What combination of elements creates something stronger than any individual component?"
+### Hata Ağacı Analizi
+İstenmeyen sonuca geriye doğru giderek AND/OR mantığıyla neden ağacı kurar.
+**Ne zaman kullanılır:** Güvenlik kritik sistemlerde veya karmaşık hata analizinde.
+**Ana soru:** "Bu sonucu üretmek için hangi arıza kombinasyonlarının olması gerekir?"
 
-### Coevolution
-Two or more entities reciprocally shape each other's evolution over time — an arms race of mutual adaptation.
-**Use when**: Competitors, regulators, or partners are adapting in response to your moves.
-**Key question**: "How is the other side evolving in response to us, and how should that change our next move?"
+### Kuvvet Alanı Analizi
+Değişimi iten ve direnen kuvvetleri haritalar.
+**Ne zaman kullanılır:** Değişim girişimlerinde veya bir şey neden ilerlemiyor diye bakarken.
+**Ana soru:** "Bu değişimi hangi güçler itiyor, hangileri engelliyor?"
 
-### Niche Construction
-Organisms actively modify their own environment, which in turn shapes future selection pressures.
-**Use when**: You can change the playing field rather than just adapt to it.
-**Key question**: "Instead of adapting to this environment, can we reshape the environment itself?"
+### MECE Ayrıştırması
+Sorunu örtüşmeyen ve birlikte tüm alanı kapsayan parçalara ayırır.
+**Ne zaman kullanılır:** Problem büyük ve dağınıksa.
+**Ana soru:** "Kategorilerim birbirine biniyor mu, yoksa boşluk bırakıyor mu?"
 
----
+### Hipotez Odaklı Problem Çözme
+Önce geçici bir cevap kurar, sonra onu hızlıca doğrulayan/çürüten test tasarlar.
+**Ne zaman kullanılır:** Veri toplamak pahalıysa ve hızla yaklaşım daraltmak gerekiyorsa.
+**Ana soru:** "Hipotezimi şu an doğrulamak ya da öldürmek için en bilgilendirici tek test nedir?"
 
-## Economics & Strategy
+### Parlak Noktalar Analizi
+Ne bozuk diye değil, nerede zaten işe yarıyor diye bakar.
+**Ne zaman kullanılır:** Problem çok büyük görünüyorsa ama lokal başarı örnekleri varsa.
+**Ana soru:** "Bu zaten nerede iyi çalışıyor ve orada ne farklı?"
 
-### Incentives
-People respond to incentives. Understand what someone is incentivized to do and you understand their behavior.
-**Use when**: Predicting behavior, designing systems, or understanding why someone is acting a certain way.
-**Key question**: "What are the actual incentives at play here? (Not the stated ones — the real ones.)"
-
-### Comparative Advantage
-Focus on what you do relatively better than alternatives, even if you're not the absolute best.
-**Use when**: Deciding where to focus time, effort, or resources.
-**Key question**: "What can I do relatively better than my alternatives, even if I'm not the absolute best?"
-
-### Economies of Scale
-Unit costs decrease as volume increases. There are advantages to being bigger — up to a point.
-**Use when**: Evaluating business strategy, growth decisions, or operational efficiency.
-**Key question**: "Does scaling up reduce per-unit costs, or are we past the point of scale benefits?"
-
-### Network Effects
-A product becomes more valuable as more people use it.
-**Use when**: Evaluating platforms, technologies, or markets.
-**Key question**: "Does each new user make this more valuable for existing users?"
-
-### Creative Destruction
-New innovations destroy old ones. Incumbents are displaced by disruptors.
-**Use when**: Evaluating industry trends or competitive threats.
-**Key question**: "What emerging alternative could make the current approach obsolete?"
-
-### Diminishing Returns
-Each additional unit of input produces less additional output.
-**Use when**: Deciding when to stop investing in something.
-**Key question**: "Is the next unit of effort still producing meaningful returns?"
-
-### Moats (Competitive Advantage)
-Structural advantages that protect a position from competition.
-**Use when**: Evaluating the durability of a competitive position.
-**Key question**: "What makes this position defensible? How hard is it for someone else to replicate?"
-
-### Porter's Five Forces
-Analyze competitive intensity through: rivalry, new entrants, substitutes, buyer power, supplier power.
-**Use when**: Industry or competitive analysis.
-**Key question**: "Which of the five competitive forces is strongest, and what does that imply?"
-
-### Scenario Planning
-Develop multiple plausible futures rather than betting on one forecast.
-**Use when**: Long-range planning under high uncertainty.
-**Key question**: "What are 3 fundamentally different but plausible futures, and how does our strategy hold up in each?"
-
-### Tragedy of the Commons
-When individuals each act in rational self-interest with a shared resource, they collectively deplete or degrade it for everyone.
-**Use when**: Designing shared resources, platforms, team budgets, or common infrastructure.
-**Key question**: "Is everyone optimizing for their own use without anyone being responsible for long-term health?"
-
-### Principal-Agent Problem
-When one party (agent) acts on behalf of another (principal), their interests may diverge, leading to suboptimal outcomes.
-**Use when**: Hiring, delegating, working with contractors or advisors, or designing compensation structures.
-**Key question**: "Are this person's incentives actually aligned with my goals?"
-
-### Winner-Take-All / Power Laws
-In many domains, a tiny number of players capture the vast majority of rewards. Small advantages compound into dominance.
-**Use when**: Choosing markets to enter, evaluating competitive dynamics, or allocating effort across projects.
-**Key question**: "Does being slightly better here lead to disproportionate rewards, or are rewards spread evenly?"
-
-### Lindy Effect
-For non-perishable things (ideas, technologies, books), every additional period of survival implies a longer remaining life expectancy.
-**Use when**: Choosing technologies, frameworks, or strategies; predicting which trends will endure.
-**Key question**: "How long has this already endured? That's the best predictor of how long it will last."
-
-### Switching Costs / Lock-in
-The cost (time, money, effort, data migration) a user incurs to change from one product to another.
-**Use when**: Evaluating competitive defensibility or deciding whether to adopt a vendor/platform.
-**Key question**: "How painful is it for users to leave, and does that pain grow over time?"
+### Yerel ve Küresel En İyiler
+Bir çözüm yerel olarak en iyi olabilir, ama daha geniş aramada çok daha iyi çözüm vardır.
+**Ne zaman kullanılır:** Artımlı iyileştirmeler tıkanmışsa.
+**Ana soru:** "Sadece bulunduğum küçük tepeyi mi optimize ediyorum, daha büyük bir tepe var mı?"
 
 ---
 
-## Statistics & Probability
+## Sistemler ve Karmaşıklık
 
-### Bayesian Updating
-Update your beliefs proportionally to the strength of new evidence.
-**Use when**: Receiving new information that should shift your confidence.
-**Key question**: "Given this new evidence, how much should I update my prior belief?"
+### Geri Besleme Döngüleri
+Pozitif döngüler büyütür, negatif döngüler dengeler. Çoğu sistemde ikisi birlikte vardır.
+**Ne zaman kullanılır:** Bir şeyin neden hızlandığını ya da neden dengede takıldığını anlamak için.
+**Ana soru:** "Bu pekiştirici mi, dengeleyici mi?"
 
-### Base Rate Neglect
-People focus on specific case information and ignore the general frequency (base rate).
-**Use when**: Evaluating probabilities, especially for rare events.
-**Key question**: "What percentage of cases like this turn out this way in general?"
+### Belirim
+Parçaların tek tek taşımadığı özelliklerin etkileşimden doğması.
+**Ne zaman kullanılır:** Grup ya da sistem davranışı, bileşenlere bakınca açıklanamıyorsa.
+**Ana soru:** "Burada hangi davranış, parçaların etkileşiminden doğuyor?"
 
-### Regression to the Mean
-Extreme outcomes tend to be followed by more average ones.
-**Use when**: Interpreting exceptional performance, outliers, or results.
-**Key question**: "Is this exceptional result likely to persist, or will it regress toward the average?"
+### Kaldıraç Noktaları
+Sistemin küçük bir müdahaleyle büyük sonuç üreten noktaları.
+**Ne zaman kullanılır:** Kısıtlı kaynakla maksimum etki ararken.
+**Ana soru:** "Küçük bir hamleyle en büyük değişimi nerede üretirim?"
 
-### Survivorship Bias
-We see the winners but not the losers, skewing our perception of success rates.
-**Use when**: Drawing lessons from success stories, case studies, or examples.
-**Key question**: "Am I only looking at the ones that survived? What about all the ones that failed the same way?"
+### İstenmeyen Sonuçlar (Goodhart Yasası, Kobra Etkisi)
+Ölçü hedefe dönüştüğünde bozulur; her müdahale yan etki üretir.
+**Ne zaman kullanılır:** Teşvik, metrik, politika veya sistem müdahalesi tasarlarken.
+**Ana soru:** "İnsanlar tam bu metriği optimize ederse hangi sapkın davranışlar doğar?"
 
-### Simpson's Paradox
-A trend in aggregated data can reverse when the data is split into subgroups.
-**Use when**: Interpreting data that's been aggregated or averaged.
-**Key question**: "Does this trend hold when we break the data into subgroups, or does it reverse?"
+### Karmaşık Uyarlanabilir Sistemler
+Aktörlerin birbirine uyumlandığı, bu yüzden öngörünün zorlaştığı sistemler.
+**Ne zaman kullanılır:** Piyasalar, organizasyonlar, ekosistemler gibi uyarlanan yapılarda.
+**Ana soru:** "Diğer aktörler benim hamleme nasıl uyum sağlayacak?"
 
-### Expected Value
-Probability × Outcome for each possibility. The weighted average of all outcomes.
-**Use when**: Any decision with uncertain outcomes and estimable probabilities.
-**Key question**: "What's the probability-weighted average of all possible outcomes?"
+### Darboğaz Analizi
+Bir zincirin çıktısı en zayıf halkasıyla sınırlanır.
+**Ne zaman kullanılır:** Süreç, tedarik zinciri veya iş akışını optimize ederken.
+**Ana soru:** "Tüm sistemin çıktısını sınırlayan tek nokta hangisi?"
 
-### Fat Tails and Black Swans
-Some distributions have extreme events that are more probable than a normal distribution would suggest.
-**Use when**: Risk assessment, especially in finance, technology, or complex systems.
-**Key question**: "What are the extreme scenarios, and could the distribution of outcomes have fatter tails than I'm assuming?"
+### Stoklar ve Akışlar
+Bir sistemin zaman içindeki durumunu belirleyen birikimler ve akış hızları.
+**Ne zaman kullanılır:** Teknik borç, çalışan devri, nakit rezervi gibi birikimli yapıları anlamak için.
+**Ana soru:** "Burada ne birikiyor ya da azalıyor, bunu hangi akışlar belirliyor?"
 
-### Confidence Calibration
-How well do your confidence levels match reality? Most people are overconfident.
-**Use when**: Stating certainty about anything.
-**Key question**: "If I say I'm 90% confident, am I right 90% of the time when I say that?"
+### Gecikmeler
+Bir eylem ile etkisinin görünmesi arasındaki zaman gecikmeleri.
+**Ne zaman kullanılır:** Düzeltmeler sürekli fazla/eksik kalıyorsa.
+**Ana soru:** "Bu eylemin etkisi ne kadar sonra görünür, bu arada aşırı tepki veriyor olabilir miyiz?"
 
-### Correlation vs Causation
-Two variables moving together does not mean one causes the other. A third variable or reverse causation may explain the relationship.
-**Use when**: Someone presents data showing two things are related and implies one drives the other.
-**Key question**: "Could there be a confounding variable, or could the causal arrow point the other direction?"
+### Kritik Kütle / Kırılma Noktaları
+Belirli bir eşiğin aşılmasıyla sistemin rejim değiştirmesi.
+**Ne zaman kullanılır:** Yavaş büyümenin bir anda ivmelenip ivmelenmeyeceğini anlamak için.
+**Ana soru:** "Bu sistemi yeni rejime taşıyan bir eşik var mı?"
 
-### Selection Bias
-Systematic error introduced by non-random selection of data, making the sample unrepresentative of the population.
-**Use when**: Evaluating any study, dataset, or anecdotal evidence where "who got included" matters.
-**Key question**: "Who or what is missing from this dataset, and how would their inclusion change the conclusion?"
+### Histerezis / Yol Bağımlılığı
+Sistemin bugünkü çıktısı geçmişte izlenen yola bağlıdır.
+**Ne zaman kullanılır:** Bir zararı geri almanın, o zararı vermekten daha zor olabileceği durumlarda.
+**Ana soru:** "Bu sistem gerçekten geri döndürülebilir mi, yoksa yeni bir patikaya mı kilitlendi?"
 
-### Gambler's Fallacy
-Believing that past independent events affect the probability of future independent events.
-**Use when**: Interpreting streaks or runs in independent processes — coin flips, market returns, hiring outcomes.
-**Key question**: "Are these events actually dependent on each other, or am I seeing a pattern in genuinely independent trials?"
-
----
-
-## Psychology & Cognitive Biases
-
-### Confirmation Bias
-We seek, interpret, and remember information that confirms existing beliefs.
-**Use when**: Evaluating evidence, conducting research, or making judgments.
-**Key question**: "Am I seeking out information that could prove me wrong, or only information that confirms what I already believe?"
-
-### Anchoring
-The first piece of information disproportionately influences subsequent judgments.
-**Use when**: Negotiation, estimation, or any situation where an initial number is presented.
-**Key question**: "Is my estimate being pulled toward an initial number that may be irrelevant?"
-
-### Loss Aversion
-Losses feel roughly twice as painful as equivalent gains feel good.
-**Use when**: Understanding risk-taking behavior, framing choices, or evaluating decisions.
-**Key question**: "Am I avoiding this because the loss feels disproportionately painful, even though the expected value is positive?"
-
-### Status Quo Bias
-We prefer the current state of affairs. The default option has an unfair advantage.
-**Use when**: Any decision where "do nothing" is an option.
-**Key question**: "If I were starting from scratch, would I choose the current state?"
-
-### Dunning-Kruger Effect
-Low competence leads to overconfidence; high competence leads to underconfidence.
-**Use when**: Assessing your own or others' confidence in their abilities.
-**Key question**: "Is my confidence proportional to my actual knowledge and experience here?"
-
-### Social Proof
-We look to others to determine correct behavior, especially under uncertainty.
-**Use when**: Making choices where others' behavior is influencing you.
-**Key question**: "Am I choosing this because it's right, or because everyone else is doing it?"
-
-### Availability Heuristic
-We judge probability by how easily examples come to mind, not by actual frequency.
-**Use when**: Estimating risk or frequency of events.
-**Key question**: "Am I overestimating this because vivid examples come to mind easily?"
-
-### Framing Effect
-The way information is presented dramatically affects decisions, even when the underlying facts are identical.
-**Use when**: Presenting or receiving information.
-**Key question**: "Would my conclusion change if this same information were framed differently?"
-
-### System 1 and System 2
-Fast, intuitive thinking (System 1) vs slow, deliberate thinking (System 2). Most errors come from using System 1 when System 2 is needed.
-**Use when**: Any important decision. Recognize which system is driving your thinking.
-**Key question**: "Am I using my gut here, and is this a situation where gut instinct is reliable?"
-
-### Hindsight Bias
-After an event occurs, believing you "knew it all along," which distorts learning from outcomes.
-**Use when**: Reviewing past decisions or conducting post-mortems.
-**Key question**: "What did I actually believe before I knew the result?"
-
-### Fundamental Attribution Error
-Overweighting personality and underweighting situational factors when explaining other people's behavior.
-**Use when**: Judging why someone acted a certain way, especially negatively.
-**Key question**: "What situational pressures could explain this behavior, independent of the person's character?"
-
-### Commitment & Consistency Bias
-Once people take a position, they feel internal pressure to behave consistently with it, even when the original reasons evaporate.
-**Use when**: You or others are defending a prior decision despite mounting contrary evidence.
-**Key question**: "Am I holding this position because the evidence still supports it, or because I publicly committed to it?"
-
-### Planning Fallacy
-Systematically underestimating the time, cost, and risk of future actions while overestimating their benefits.
-**Use when**: Making project timelines, budgets, or any forward-looking estimate.
-**Key question**: "What happened when similar projects were attempted in the past, rather than my optimistic inside view?"
-
-### Halo Effect
-A positive impression in one domain irrationally spills over into unrelated judgments.
-**Use when**: Evaluating people, companies, or products where one salient positive trait may be biasing overall assessment.
-**Key question**: "If I removed the one impressive trait, would I still rate everything else as highly?"
-
-### Curse of Knowledge
-Once you know something, you find it nearly impossible to imagine not knowing it, which distorts communication.
-**Use when**: Teaching, writing, presenting, or estimating how long it will take someone else to learn something.
-**Key question**: "What would this look like to someone encountering it for the first time?"
-
-### Peak-End Rule
-People judge an experience primarily by its most intense moment and its ending, not by the average of every moment.
-**Use when**: Designing customer experiences, presentations, or any sequence where memory of quality matters.
-**Key question**: "What will the emotional peak and final moment of this experience be?"
+### Antikırılganlık
+Sadece dayanmak değil, sarsıntıdan güçlenmek.
+**Ne zaman kullanılır:** Bir yapıyı stresten korumak mı yoksa kontrollü strese maruz bırakmak mı gerektiğine karar verirken.
+**Ana soru:** "Bu sistem şoklardan sonra güçleniyor mu, yoksa sadece hayatta mı kalıyor?"
 
 ---
 
-## Communication & Persuasion
+## Fizik ve Mühendislik Benzetmeleri
 
-### Steel Manning
-Construct the strongest possible version of the opposing argument before attacking it.
-**Use when**: Debate, disagreement, or evaluating opposing viewpoints.
-**Key question**: "What is the strongest, most charitable version of the argument I disagree with?"
+### Eylemsizlik
+Nesneler, alışkanlıklar ve organizasyonlar mevcut durumlarını korumaya direnç gösterir.
+**Ne zaman kullanılır:** Değişime neden direnildiğini anlamak için.
+**Ana soru:** "Bunu bulunduğu durumda tutan eylemsizlik nedir?"
 
-### Pyramid Principle
-Start with the conclusion, then support with evidence. Don't make people wait for the point.
-**Use when**: Writing, presenting, or communicating complex ideas.
-**Key question**: "Am I leading with my conclusion, or burying it under background?"
+### Aktivasyon Enerjisi
+Bir değişimin başlaması için gereken ilk enerji.
+**Ne zaman kullanılır:** Faydalı değişim neden başlamıyor diye bakarken.
+**Ana soru:** "Bunu başlatmak için gereken ilk eşik nedir, nasıl düşürülür?"
 
-### BLUF (Bottom Line Up Front)
-State the most important thing first. Details follow.
-**Use when**: Email, briefings, or any time-pressured communication.
-**Key question**: "If the reader stops after one sentence, will they know the key point?"
+### Sürtünme ve Viskozite
+Hareketi yavaşlatan direnç. Bazen daha çok itmek yerine sürtünmeyi azaltmak gerekir.
+**Ne zaman kullanılır:** Bir süreç gereğinden zor ilerliyorsa.
+**Ana soru:** "Buradaki sürtünme ne ve bunu azaltabilir miyim?"
 
-### Circle of Competence (for communication)
-Signal what you know and what you don't. Credibility comes from acknowledging limits.
-**Use when**: Giving advice, making recommendations, or being asked for expertise.
-**Key question**: "Am I clearly communicating what I know vs what I'm speculating about?"
+### Kaldıraç
+Doğru noktaya uygulanan küçük kuvvetin büyük etki doğurması.
+**Ne zaman kullanılır:** Çarpan etkisi ararken.
+**Ana soru:** "Orantısız etki için çabamı nereye uygulamalıyım?"
 
-### Narrative / Storytelling
-Humans process and retain information far better in story form than in abstract arguments or data alone.
-**Use when**: Making a case, teaching, or trying to make ideas memorable and emotionally resonant.
-**Key question**: "What is the story here, and who is the protagonist?"
+### Hız (Sürat + Yön)
+Yönsüz hız anlamsızdır; yanlış yönde verimlilik hâlâ başarısızlıktır.
+**Ne zaman kullanılır:** İlerleme veya üretkenliği değerlendirirken.
+**Ana soru:** "Hızlı mı gidiyoruz, yoksa doğru yöne mi gidiyoruz?"
 
-### Reciprocity
-People feel compelled to return favors, concessions, and gestures — giving first creates social debt.
-**Use when**: Building relationships, opening negotiations, or seeking buy-in.
-**Key question**: "What can I give first to create a natural obligation to reciprocate?"
+### Güvenlik Marjı
+Varsayımlar bozulduğunda sistemi ayakta tutacak tampon.
+**Ne zaman kullanılır:** Mühendislik, finans veya proje planlamasında.
+**Ana soru:** "Varsayımlarımız %20-30 yanlış çıksa bu plan hâlâ çalışır mı?"
+
+### Yedeklilik
+Kritik sistemler yedek ister; tek hata noktası tehlikelidir.
+**Ne zaman kullanılır:** Arıza maliyeti yüksek sistemleri tasarlarken.
+**Ana soru:** "Bu bileşen çökerse ne olur; yedeği var mı?"
+
+### Katalizörler
+Tükenmeden değişimi hızlandıran unsur; kişi, teknoloji ya da olay olabilir.
+**Ne zaman kullanılır:** Değişimi hızlandırmak için çarpan ararken.
+**Ana soru:** "Bu süreci hızlandıracak katalizör nedir?"
+
+### Rezonans
+Doğru frekanstaki küçük ama zamanlı girdilerin büyük etki üretmesi.
+**Ne zaman kullanılır:** Mesaj, girişim veya müdahaleyi zamanlarken.
+**Ana soru:** "Bu sisteme doğal frekansında mı dokunuyorum, yoksa ona karşı mı itiyorum?"
+
+### Yarı Ömür / Bozunma
+Bilgi, beceri veya avantajın zamanla değer kaybetme hızı.
+**Ne zaman kullanılır:** Bilginin veya avantajın ömrünü değerlendirirken.
+**Ana soru:** "Bunun yarı ömrü ne; ne kadar sürede etkisini yarıya kaybeder?"
 
 ---
 
-## Creativity & Innovation
+## Biyoloji ve Evrim
+
+### Doğal Seçilim
+Belirli çevrede işe yarayan özellikler korunur; işleyen hayatta kalır.
+**Ne zaman kullanılır:** Rekabet, pazar, fikir ya da organizasyon dayanımı analizinde.
+**Ana soru:** "Burada hangi seçilim baskısı çalışıyor ve neyi ödüllendiriyor?"
+
+### Kızıl Kraliçe Etkisi
+Bazen yerinde saymamak için bile sürekli koşmak gerekir.
+**Ne zaman kullanılır:** Rekabet stratejisi veya kişisel gelişim değerlendirmesinde.
+**Ana soru:** "İyileşmeyi bırakırırsam ne kadar hızlı geriye düşerim?"
+
+### Ekosistem Düşünmesi
+Hiçbir şey tek başına var olmaz; her hareket, bağlantılı aktör ağına dokunur.
+**Ne zaman kullanılır:** Yan etkileri ve paydaş tepkilerini düşünürken.
+**Ana soru:** "Bu ekosistemde başka kimler var ve benim hamleme nasıl tepki verecekler?"
+
+### Uyumlanma
+Koşullar değiştikçe yaklaşımın da değişmesi gerekir.
+**Ne zaman kullanılır:** Daha önce işe yarayan yaklaşım artık işlemiyorsa.
+**Ana soru:** "Çevre değişti mi ve bu yüzden mevcut yaklaşımımız zayıfladı mı?"
+
+### Alaşımlama (Birleşim Etkileri)
+Farklı unsurlar birlikte tek başlarına sahip olmadıkları özellikleri üretebilir.
+**Ne zaman kullanılır:** Takım, beceri veya strateji kombinasyonları kurarken.
+**Ana soru:** "Hangi kombinasyon tek tek bileşenlerden daha güçlü bir yapı üretir?"
+
+### Birlikte Evrim
+İki ya da daha fazla tarafın birbirine tepki vererek birlikte evrilmesi.
+**Ne zaman kullanılır:** Rakipler, düzenleyiciler veya ortaklar senin hamlene göre değişiyorsa.
+**Ana soru:** "Karşı taraf bizim hareketlerimize göre nasıl evriliyor?"
+
+### Niş İnşası
+Sadece çevreye uyum sağlamak değil, çevrenin kendisini değiştirmek.
+**Ne zaman kullanılır:** Oyun alanını yeniden şekillendirme şansın varsa.
+**Ana soru:** "Bu ortama uyum sağlamak yerine ortamı değiştirip lehime çevirebilir miyim?"
+
+---
+
+## Ekonomi ve Strateji
+
+### Teşvikler
+İnsanlar teşviklere tepki verir; teşviki anlarsan davranışı anlarsın.
+**Ne zaman kullanılır:** Davranış öngörüsü veya sistem tasarımında.
+**Ana soru:** "Burada beyan edilen değil, gerçek teşvikler neler?"
+
+### Karşılaştırmalı Üstünlük
+Mutlak en iyisi olmasan da, alternatiflerine göre daha iyi olduğun yere yoğunlaş.
+**Ne zaman kullanılır:** Zaman ve enerjiyi nereye ayıracağını seçerken.
+**Ana soru:** "Alternatiflerime göre görece daha avantajlı olduğum alan hangisi?"
+
+### Ölçek Ekonomileri
+Büyüdükçe birim maliyet düşebilir; ama bunun da sınırı vardır.
+**Ne zaman kullanılır:** Büyüme ve operasyon verimliliği kararlarında.
+**Ana soru:** "Ölçek büyüdükçe gerçekten birim maliyet düşüyor mu?"
+
+### Ağ Etkileri
+Kullanıcı arttıkça ürün daha değerli hâle gelir.
+**Ne zaman kullanılır:** Platform, ekosistem ve pazar değerlendirmesinde.
+**Ana soru:** "Her yeni kullanıcı mevcut kullanıcılar için de değeri artırıyor mu?"
+
+### Yaratıcı Yıkım
+Yeni inovasyonlar eskileri yerinden eder.
+**Ne zaman kullanılır:** Sektör trendi ve yıkıcı tehdit analizi yaparken.
+**Ana soru:** "Hangi yeni alternatif mevcut yaklaşımı demode hâle getirebilir?"
+
+### Azalan Getiriler
+Her ek girdi, giderek daha az ek çıktı üretir.
+**Ne zaman kullanılır:** Bir şeye ne zaman daha fazla yatırım yapmayı bırakacağını seçerken.
+**Ana soru:** "Bir sonraki çaba birimi hâlâ anlamlı getiri üretiyor mu?"
+
+### Hendekler (Rekabet Avantajı)
+Bir konumu rekabete karşı koruyan yapısal avantajlar.
+**Ne zaman kullanılır:** Rekabet avantajının dayanıklılığını ölçerken.
+**Ana soru:** "Bu konumu savunan hendek ne ve başkası bunu ne kadar kolay kopyalar?"
+
+### Porter'ın Beş Gücü
+Rekabet yoğunluğunu beş güç üzerinden analiz eder: mevcut rekabet, yeni giriş, ikame, alıcı gücü, tedarikçi gücü.
+**Ne zaman kullanılır:** Sektör ve rekabet analizi yaparken.
+**Ana soru:** "Bu alanda marjları ve hareket alanını sıkıştıran beş güç nasıl çalışıyor?"
+
+### Senaryo Planlama
+Tek gelecek varsayımı yerine birden çok makul gelecek kurgular.
+**Ne zaman kullanılır:** Belirsizliğin yüksek olduğu stratejik durumlarda.
+**Ana soru:** "Üç makul gelecek kurgulasam, her birinde ne değişir?"
+
+### Ortak Varlıkların Trajedisi
+Ortak kaynaklarda herkes kısa vadeli çıkarını izlerse toplam sistem zarar görür.
+**Ne zaman kullanılır:** Paylaşılan kaynak, veri, dikkat veya altyapı kararlarında.
+**Ana soru:** "Bu ortak kaynağın aşağı yönlü maliyetini gerçekten kim üstleniyor?"
+
+### Asil-Vekil Problemi
+Kararı veren ile sonuca katlanan kişi aynı değilse hizasızlık doğar.
+**Ne zaman kullanılır:** Vekâlet ilişkileri ve kurum analizinde.
+**Ana soru:** "Kararı veren ile bedeli ödeyen kişi aynı mı?"
+
+### Kazanan Hepsini Alır / Güç Yasaları
+Küçük farklar zamanla devasa üstünlüklere dönüşebilir.
+**Ne zaman kullanılır:** Platformlar, medya, yatırım ve pazar yapılarında.
+**Ana soru:** "Burada küçük bir avantaj zamanla baskınlığa dönüşüyor mu?"
+
+### Lindy Etkisi
+Uzun zamandır ayakta kalan şeyin hayatta kalma ihtimali çoğu zaman daha yüksektir.
+**Ne zaman kullanılır:** Yeni ve parlak olanla eski ve dayanıklı olanı tartarken.
+**Ana soru:** "Bu ne kadar süredir hayatta; bu, geleceği hakkında ne söylüyor?"
+
+### Geçiş Maliyetleri / Kilitlenme
+Bir sistemden çıkmanın acısı ne kadar yüksekse kilitlenme o kadar artar.
+**Ne zaman kullanılır:** Araç, tedarikçi, platform veya süreç seçerken.
+**Ana soru:** "Buradan ayrılmak ne kadar acı verir?"
+
+---
+
+## İstatistik ve Olasılık
+
+### Bayesyen Güncelleme
+Yeni kanıt geldikçe inancı sistematik olarak güncelle.
+**Ne zaman kullanılır:** Belirsizlik altındaki tüm değerlendirmelerde.
+**Ana soru:** "Bu yeni kanıt güvenimi ne kadar ve hangi yönde değiştirmeli?"
+
+### Taban Oranı İhmali
+Spesifik hikâye uğruna genel oranları göz ardı etme.
+**Ne zaman kullanılır:** İstisnai görünen vakaları değerlendirirken.
+**Ana soru:** "Bu tür durumların genel taban oranı nedir?"
+
+### Ortalamaya Dönüş
+Aşırı iyi ya da kötü sonuçlar, çoğu zaman ortalamaya geri döner.
+**Ne zaman kullanılır:** Uç sonuçları yorumlarken.
+**Ana soru:** "Bu sonuç gerçekten özel mi, yoksa ortalamaya geri dönüş mü göreceğim?"
+
+### Hayatta Kalma Yanlılığı
+Sadece hayatta kalan örneklere bakmak yanıltır.
+**Ne zaman kullanılır:** Başarı hikâyeleri, yatırım stratejileri ve kariyer örneklerini okurken.
+**Ana soru:** "Burada başarısız olan ama görünmeyen kimler var?"
+
+### Simpson Paradoksu
+Toplam veri bir şey söylerken alt gruplar tam tersini söyleyebilir.
+**Ne zaman kullanılır:** Toplu istatistikler ile alt segmentler çeliştiğinde.
+**Ana soru:** "Bu toplam görüntü, alt gruplarda tersine mi dönüyor?"
+
+### Beklenen Değer
+Olasılık ile etkiyi çarparak kararın beklenen matematiksel değerini hesaplar.
+**Ne zaman kullanılır:** Riskli seçenekler karşılaştırılırken.
+**Ana soru:** "Bu sonucun olasılığı ile etkisi çarpılınca beklenen değer ne çıkıyor?"
+
+### Kalın Kuyruklar ve Siyah Kuğular
+Nadir ama yüksek etkili olaylar çoğu sistemde sandığından daha önemlidir.
+**Ne zaman kullanılır:** Kuyruk risklerinin büyük olduğu alanlarda.
+**Ana soru:** "Düşük olasılıklı ama çok yıkıcı hangi olayları ihmal ediyorum?"
+
+### Güven Kalibrasyonu
+Güven düzeyi ile doğruluk düzeyini hizaya getirmek.
+**Ne zaman kullanılır:** Aşırı güven veya aşırı şüphe riskinde.
+**Ana soru:** "Bu kadar emin olmak için gerçekten yeterli kanıtım var mı?"
+
+### Korelasyon ve Nedensellik
+Birlikte hareket etmek, sebep-sonuç olmak değildir.
+**Ne zaman kullanılır:** Veri içinde görülen örüntüleri yorumlarken.
+**Ana soru:** "Burada gerçekten nedensel mekanizma var mı, yoksa sadece birlikte mi görünüyor?"
+
+### Seçim Yanlılığı
+Veriye kimlerin dahil olup kimlerin dışarıda kaldığı sonucu çarpıtabilir.
+**Ne zaman kullanılır:** Örneklem verisi, anket, kullanıcı verisi ve vaka seçimlerinde.
+**Ana soru:** "Bu veri setine kim giremediği için görünmüyor?"
+
+### Kumarbaz Yanılgısı
+Bağımsız olayları birbirine bağlı sanmak.
+**Ne zaman kullanılır:** Rastgele süreçleri yorumlarken.
+**Ana soru:** "Bu olay gerçekten bağımsız mı, yoksa ben sahte bir bağımlılık mı görüyorum?"
+
+---
+
+## Psikoloji ve Bilişsel Yanlılıklar
+
+### Onaylama Yanlılığı
+Önceden inanılanı destekleyen kanıtı daha kolay görüp çelişeni ihmal etmek.
+**Ne zaman kullanılır:** Kendi analizinin aynı sonuca sürekli dönüp dönmediğini kontrol ederken.
+**Ana soru:** "Bu sonuca karşı olan kanıtı gerçekten aradım mı?"
+
+### Çapalama
+İlk görülen sayı, fikir veya çerçeve sonrasını gereğinden fazla etkiler.
+**Ne zaman kullanılır:** İlk teklif, ilk tahmin veya ilk anlatı sonrası karar verirken.
+**Ana soru:** "Şu an düşüncemi aşırı etkileyen ilk çıpa ne?"
+
+### Kayıp Kaçınması
+İnsanlar kaybı, aynı büyüklükteki kazançtan daha güçlü hisseder.
+**Ne zaman kullanılır:** Riskli tercihler ve değişim kararlarında.
+**Ana soru:** "Bunu gerçekten kötü seçenek olduğu için mi reddediyorum, yoksa kayıptan mı korkuyorum?"
+
+### Statüko Yanlılığı
+Mevcut durumu gereğinden fazla tercih etme eğilimi.
+**Ne zaman kullanılır:** Değişim kararı zor geliyorsa.
+**Ana soru:** "Bugünkü durumu sırf mevcut olduğu için mi koruyorum?"
+
+### Dunning-Kruger Etkisi
+Bilgisi az olanın kendine fazla güvenmesi; bilgisi çok olanın ise daha ihtiyatlı olması.
+**Ne zaman kullanılır:** Öz güven ile uzmanlık arasındaki ilişkiyi test ederken.
+**Ana soru:** "Bu konuda güvenim, gerçek yetkinlik seviyemle uyumlu mu?"
+
+### Sosyal Kanıt
+Başkalarının yaptığı şeyi doğru sanma eğilimi.
+**Ne zaman kullanılır:** Popüler seçimlerin doğruluğunu tartarken.
+**Ana soru:** "Bunu gerçekten iyi olduğu için mi istiyorum, yoksa herkes yaptığı için mi?"
+
+### Erişilebilirlik Sezgisi
+Zihne kolay gelen örnekler gerçekte olduğundan daha yaygın sanılır.
+**Ne zaman kullanılır:** Canlı, yakın veya medyatik örnekler kararını etkilerken.
+**Ana soru:** "Bu aklıma çok geldiği için mi önemli görünüyor, yoksa gerçekten sık mı?"
+
+### Çerçeveleme Etkisi
+Aynı bilgi, sunuluş biçimine göre farklı kararlar doğurabilir.
+**Ne zaman kullanılır:** Sunum dili ve anlatı kararı etkiliyorsa.
+**Ana soru:** "Bu bilgi başka türlü çerçevelense yine aynı kararı verir miydim?"
+
+### Sistem 1 ve Sistem 2
+Hızlı-sezgisel düşünme ile yavaş-analitik düşünmeyi ayırır.
+**Ne zaman kullanılır:** Hızlı bir yargı oluştuğunda.
+**Ana soru:** "Şu an sezgisel mi tepki veriyorum, yoksa yavaş düşünmeye geçmem gerekiyor mu?"
+
+### Geriye Dönük Bilme Yanlılığı
+Sonuç olduktan sonra "zaten belliydi" sanmak.
+**Ne zaman kullanılır:** Geçmiş kararları değerlendirirken.
+**Ana soru:** "O zaman gerçekten neye inanıyordum; sonucu sonradan mı aklımda düzleştiriyorum?"
+
+### Temel Yükleme Hatası
+Başkalarının davranışını kişilikle, kendi davranışını durumla açıklamak.
+**Ne zaman kullanılır:** İnsan davranışını yorumlarken.
+**Ana soru:** "Burada kişilikten çok durumsal baskıların etkisi olabilir mi?"
+
+### Bağlılık ve Tutarlılık Yanlılığı
+Bir pozisyona bağlandıktan sonra onu koruma eğilimi.
+**Ne zaman kullanılır:** Kamuya açık vaatler, uzun süre savunulan fikirler ve yatırım yapılmış projelerde.
+**Ana soru:** "Bunu gerçekten iyi olduğu için mi savunuyorum, yoksa zaten savunduğum için mi?"
+
+### Planlama Yanılgısı
+İnsanlar süre, maliyet ve zorluğu sistematik olarak küçümser.
+**Ne zaman kullanılır:** Proje, teslim tarihi veya çaba tahmini yaparken.
+**Ana soru:** "Benzer işler gerçekte ne kadar sürmüştü?"
+
+### Hale Etkisi
+Tek bir olumlu özelliğin geri kalan tüm değerlendirmeyi boyaması.
+**Ne zaman kullanılır:** Kişi, marka, ürün veya fikir değerlendirirken.
+**Ana soru:** "Bu tek güçlü özellik, kalan her şeyi gereğinden parlak mı gösteriyor?"
+
+### Bilgi Laneti
+Senin için açık olan şey, yeni biri için açık olmayabilir.
+**Ne zaman kullanılır:** İletişim kurarken, eğitim verirken, ürün anlatırken.
+**Ana soru:** "Bu, konuya ilk kez bakan biri için de aynı derecede açık mı?"
+
+### Zirve-Son Kuralı
+İnsanlar deneyimin tamamını değil, zirvesini ve sonunu daha çok hatırlar.
+**Ne zaman kullanılır:** Sunum, ürün deneyimi veya ilişki tasarlarken.
+**Ana soru:** "Bu deneyimin hangi zirvesi ve hangi sonu hatırlanacak?"
+
+---
+
+## İletişim ve İkna
+
+### Çelikleştirme
+Karşı görüşün en güçlü biçimini kurup onunla uğraşmak.
+**Ne zaman kullanılır:** Çatışmalı fikirleri adil biçimde değerlendirmek için.
+**Ana soru:** "Karşı tarafın en iyi argümanı aslında ne?"
+
+### Piramit İlkesi
+Önce sonucu ver, sonra destekleyici gerekçeleri sırala.
+**Ne zaman kullanılır:** Yönetici özeti, sunum veya net karar iletişiminde.
+**Ana soru:** "Bu mesajın alt satırdaki özü ilk cümlede ne?"
+
+### BLUF (En Alt Satırı Baştan Ver)
+En kritik özü baştan söyle.
+**Ne zaman kullanılır:** Hızlı tüketilen iletişimde.
+**Ana soru:** "Bunun tek cümlelik özü ne?"
+
+### Yetkinlik Çemberi (İletişim İçin)
+Yetkinlik sınırlarını iletişimde görünür tut.
+**Ne zaman kullanılır:** Uzmanlık alanın dışına taşan ifadeler üretirken.
+**Ana soru:** "Burada konuştuğum şey gerçekten bildiğim alan içinde mi?"
+
+### Anlatı / Hikâyeleştirme
+İnsanlar veriyi değil, çoğu zaman hikâye yapısını daha kolay işler.
+**Ne zaman kullanılır:** Karmaşık şeyi akılda kalır kılmak istediğinde.
+**Ana soru:** "Buradaki hikâye ne ve kullanıcı neden buna dikkat etmeli?"
+
+### Karşılıklılık
+Önce bir değer vermek, sonra karşılık istemek.
+**Ne zaman kullanılır:** İkna, ilişki veya işbirliği inşa ederken.
+**Ana soru:** "Karşı taraftan bir şey istemeden önce ne verebilirim?"
+
+---
+
+## Yaratıcılık ve İnovasyon
 
 ### SCAMPER
-Seven lenses for creative modification: Substitute, Combine, Adapt, Modify/Magnify, Put to another use, Eliminate, Reverse/Rearrange.
-**Use when**: Brainstorming improvements to existing products, processes, or ideas.
-**Key question**: "What happens if I substitute/combine/adapt/modify/repurpose/eliminate/reverse one element?"
+Yerine koy, birleştir, uyarla, değiştir, başka kullan, çıkar, tersine çevir adımlarıyla fikir üretir.
+**Ne zaman kullanılır:** Sistematik yaratıcı fikir üretiminde.
+**Ana soru:** "Bu fikri hangi yönden bozup yeniden kurarsam yeni bir şey çıkar?"
 
-### Design Thinking
-Empathize → Define → Ideate → Prototype → Test. Start with the user, not the solution.
-**Use when**: Creating solutions for human needs.
-**Key question**: "What does the person experiencing this problem actually need?"
+### Tasarım Odaklı Düşünme
+Empati, problem tanımı, fikir üretimi, prototipleme ve test etme üzerinden ilerler.
+**Ne zaman kullanılır:** İnsan merkezli ürün ve süreç tasarımında.
+**Ana soru:** "Kullanıcı burada gerçekte ne yaşamaya çalışıyor?"
 
-### Analogous Reasoning
-Apply solutions from one domain to problems in another.
-**Use when**: Stuck on a problem and need a fresh perspective.
-**Key question**: "What other field or domain has solved a structurally similar problem?"
+### Analojik Akıl Yürütme
+Başka alandaki benzer yapıları kullanarak yeni çözüm bulur.
+**Ne zaman kullanılır:** Kendi alanında çözüm tıkanmışsa.
+**Ana soru:** "Buna yapısal olarak benzeyen başka bir problem kimde çözüldü?"
 
-### Constraint Removal
-Temporarily remove a constraint to see what solutions become possible.
-**Use when**: Feeling boxed in by limitations.
-**Key question**: "If [constraint] didn't exist, what would the ideal solution look like?"
+### Kısıtı Kaldırma
+Bir kısıtı kaldırıp düşünceyi serbestleştirir.
+**Ne zaman kullanılır:** Gereksiz kilitlenme varsa.
+**Ana soru:** "Bu kısıt olmasaydı ne yapardım?"
 
-### Lateral Thinking
-Approach problems indirectly. Instead of the logical next step, make a creative leap.
-**Use when**: Logical approaches aren't yielding results.
-**Key question**: "What if the answer isn't along the obvious path at all?"
+### Yanal Düşünme
+Doğrusal mantık yerine yanal sıçramalarla çözüm alanını genişletir.
+**Ne zaman kullanılır:** Konvansiyonel yollar işlemiyorsa.
+**Ana soru:** "Bu probleme tamamen başka bir açıdan bakarsam ne görürüm?"
 
-### Oblique Strategies
-Introduce random, indirect prompts to break habitual thinking patterns.
-**Use when**: Direct problem-solving yields diminishing returns and you need a creative jolt.
-**Key question**: "What happens if I approach this from a completely unexpected angle?"
+### Eğik Stratejiler
+Rastlantısal ya da alışılmadık yönlendirmelerle rutini kırar.
+**Ne zaman kullanılır:** Yaratıcı blok veya tekrar eden düşünme kalıplarında.
+**Ana soru:** "Bu rutini kıracak alışılmadık ama üretken bir dürtü ne olabilir?"
 
-### Minimum Viable Experiment
-Build the smallest possible version that tests the core hypothesis before investing further.
-**Use when**: Uncertainty is high and the cost of learning by building is lower than the cost of continued analysis.
-**Key question**: "What is the cheapest experiment that would prove or disprove our core assumption?"
-
----
-
-## Learning & Personal Development
-
-### Feynman Technique
-Explain a concept in simple terms to expose gaps in understanding.
-**Use when**: Learning something new or testing your understanding.
-**Key question**: "Can I explain this so a smart 12-year-old would understand it?"
-
-### Deliberate Practice
-Focused, structured practice on weaknesses with immediate feedback. Not just repetition.
-**Use when**: Developing any skill past the beginner stage.
-**Key question**: "Am I practicing at the edge of my ability with clear feedback, or just repeating what I already can do?"
-
-### T-Shaped Skills
-Deep expertise in one area with broad knowledge across many. Depth plus breadth.
-**Use when**: Planning career development or building a team.
-**Key question**: "Where is my deep expertise, and am I broad enough to connect it to adjacent domains?"
-
-### Compounding
-Small, consistent improvements compound over time into massive results.
-**Use when**: Evaluating any long-term investment of time, effort, or money.
-**Key question**: "If I improve just 1% per week at this, where am I in a year?"
-
-### Spaced Repetition
-Reviewing material at increasing intervals dramatically improves long-term retention versus massed study.
-**Use when**: You need to commit knowledge to long-term memory reliably.
-**Key question**: "Am I spacing my review to match how memory actually fades?"
-
-### Zone of Proximal Development
-The sweet spot between what a learner can do alone and what they cannot do at all — where guided challenge produces maximum growth.
-**Use when**: Setting difficulty levels for yourself or others, coaching, or designing training.
-**Key question**: "Is this challenge just beyond current ability but achievable with support?"
+### Minimum Uygulanabilir Deney
+Temel varsayımı test edecek en ucuz ve hızlı deneyi kurar.
+**Ne zaman kullanılır:** Büyük yatırım yapmadan önce fikir doğrulamak istediğinde.
+**Ana soru:** "Bu fikrin çekirdeğini en ucuza nasıl test ederim?"
 
 ---
 
-## Time & Resource Management
+## Öğrenme ve Kişisel Gelişim
 
-### Eisenhower Matrix
-Categorize tasks by urgency and importance. Do important/urgent. Schedule important/not-urgent. Delegate urgent/not-important. Eliminate neither.
-**Use when**: Overwhelmed with tasks or feeling unproductive.
-**Key question**: "Is this task important, urgent, both, or neither?"
+### Feynman Tekniği
+Bir şeyi basitçe açıklayamıyorsan yeterince iyi anlamamışsındır.
+**Ne zaman kullanılır:** Öğrenilen şeyi gerçekten kavrayıp kavramadığını ölçerken.
+**Ana soru:** "Bunu 12 yaşındaki birine anlatabilir miyim?"
 
-### Pareto Principle (80/20 Rule)
-Roughly 80% of effects come from 20% of causes.
-**Use when**: Prioritizing effort, identifying what matters most.
-**Key question**: "Which 20% of inputs are producing 80% of the results?"
+### Bilinçli Pratik
+Rastgele tekrar değil, zayıf noktaya odaklı bilinçli çalışma.
+**Ne zaman kullanılır:** Ustalık geliştirmek istediğinde.
+**Ana soru:** "Şu an en zayıf alt becerim ne ve onu nasıl sistematik çalışırım?"
 
-### Parkinson's Law
-Work expands to fill the time available. Shorter deadlines can increase focus.
-**Use when**: Setting timelines or noticing projects dragging on.
-**Key question**: "If I had half the time, what would I cut? That's probably what's not essential."
+### T-Şekilli Beceriler
+Bir alanda derinlik, çevre alanlarda yeterli genişlik.
+**Ne zaman kullanılır:** Kariyer şekillendirirken veya ekip yapısı kurarken.
+**Ana soru:** "Benim derin gövdem ne, yatay genişliğim ne?"
 
-### Time Boxing
-Allocate a fixed time block to a task, then stop — regardless of completion.
-**Use when**: Tasks that tend to expand infinitely (research, editing, deliberation).
-**Key question**: "How much time is this decision/task actually worth?"
+### Bileşik Etki
+Küçük ama tutarlı ilerlemeler zamanla büyük sonuçlar üretir.
+**Ne zaman kullanılır:** Yavaş ama birikimli süreçleri değerlendirirken.
+**Ana soru:** "Bugün küçük görünen hangi davranış uzun vadede dev etki üretir?"
 
-### Maker's Schedule vs Manager's Schedule
-Creative work requires long uninterrupted blocks; managerial work runs on short meeting slots. Mixing them destroys the former.
-**Use when**: Structuring your own day or scheduling for a team with both types of work.
-**Key question**: "Am I protecting contiguous deep-work blocks, or fragmenting them with meetings?"
+### Aralıklı Tekrar
+Bilgiyi giderek açılan aralıklarla tekrar ederek kalıcılığı artırır.
+**Ne zaman kullanılır:** Ezber, terminoloji veya kavram kalıcılığı gerektiğinde.
+**Ana soru:** "Bu bilgiyi hangi aralıkta tekrar edersem en iyi kalır?"
 
-### Forcing Function
-A constraint, deadline, or structural mechanism that compels action and prevents procrastination or drift.
-**Use when**: Progress stalls due to indecision, perfectionism, or lack of urgency.
-**Key question**: "What structural constraint could I introduce to make the desired action inevitable?"
-
----
-
-## Game Theory & Competition
-
-### Prisoner's Dilemma
-Two parties can cooperate or defect. Individual incentives favor defection, but mutual cooperation is better.
-**Use when**: Understanding trust, competition, negotiation, or collective action problems.
-**Key question**: "Is this a one-shot game or a repeated one? Cooperation is more rational in repeated games."
-
-### Nash Equilibrium
-A stable state where no player can improve their outcome by changing strategy alone.
-**Use when**: Analyzing competitive situations or market dynamics.
-**Key question**: "If everyone else keeps their strategy, can I improve by changing mine? If not, we're at equilibrium."
-
-### Zero-Sum vs Positive-Sum
-Some situations have a fixed pie (zero-sum). Others allow the pie to grow (positive-sum).
-**Use when**: Negotiation, competition, or resource allocation.
-**Key question**: "Is this a fixed pie, or can we make the pie bigger?"
-
-### Asymmetric Information
-When one party knows more than the other, they have an advantage.
-**Use when**: Negotiations, markets, or hiring.
-**Key question**: "Who knows more here? What am I missing that they might know?"
-
-### Mechanism Design
-Design the rules and incentives of a system to produce desired outcomes.
-**Use when**: Creating processes, organizations, compensation structures, or policies.
-**Key question**: "If rational actors follow these incentives, does the system produce the outcomes we want?"
-
-### Schelling Point (Focal Point)
-In the absence of communication, people tend to converge on solutions that seem natural, prominent, or culturally obvious.
-**Use when**: Coordinating with others when explicit agreement isn't possible.
-**Key question**: "What is the obvious default that everyone would independently converge on?"
-
-### Tit for Tat
-Start cooperative, then mirror the other party's last move. Simple, forgiving, and retaliatory — the most robust strategy in iterated Prisoner's Dilemma.
-**Use when**: Repeated interactions where you need to build cooperation while deterring exploitation.
-**Key question**: "Am I rewarding cooperation and punishing defection proportionally?"
-
-### Signaling
-Costly or hard-to-fake actions that credibly communicate private information (e.g., a degree signals ability because it's expensive to obtain).
-**Use when**: You need to credibly convey something that mere words cannot prove.
-**Key question**: "What costly action can I take that would be irrational unless my claim were true?"
-
-### Moral Hazard
-When a party is insulated from risk, they behave more recklessly than they otherwise would.
-**Use when**: Designing incentives, insurance, or any system where risk-bearing and decision-making are separated.
-**Key question**: "Does the person making this decision bear the consequences of getting it wrong?"
+### Yakınsak Gelişim Alanı
+Tam erişilebilir değil ama destekle başarılabilir zorluk seviyesi.
+**Ne zaman kullanılır:** Öğrenme ve eğitim tasarlarken.
+**Ana soru:** "Bu hedef mevcut seviyemin biraz üstünde mi, yoksa çok mu uzak?"
 
 ---
 
-## Negotiation
+## Zaman ve Kaynak Yönetimi
 
-### BATNA (Best Alternative to a Negotiated Agreement)
-Your best fallback option if the current negotiation fails — the true source of negotiating power.
-**Use when**: Preparing for any negotiation; knowing when to walk away.
-**Key question**: "What is my best option if this deal falls through, and how good is it really?"
+### Eisenhower Matrisi
+Acil ve önemli ayrımıyla görevleri dört kutuda düzenler.
+**Ne zaman kullanılır:** Öncelik karmaşası olduğunda.
+**Ana soru:** "Bu gerçekten acil mi, gerçekten önemli mi?"
 
-### ZOPA (Zone of Possible Agreement)
-The range between each party's reservation price where a deal is possible for both sides.
-**Use when**: Assessing whether a deal is even feasible before investing negotiation effort.
-**Key question**: "Is there overlap between what I'd accept and what they'd accept?"
+### Pareto İlkesi (80/20 Kuralı)
+Çıktının büyük bölümü genelde girdinin küçük kısmından gelir.
+**Ne zaman kullanılır:** Etkiyi artıracak az sayıdaki hareketi seçerken.
+**Ana soru:** "Burada sonucun çoğunu üreten kritik küçük dilim hangisi?"
 
-### Logrolling
-Trading concessions on issues you value less for gains on issues you value more — expanding the pie before dividing it.
-**Use when**: Multi-issue negotiations where parties have different priorities.
-**Key question**: "What do I care about less that they care about more, and vice versa?"
+### Parkinson Yasası
+İş, kendisine ayrılan süre kadar genişler.
+**Ne zaman kullanılır:** Süre uzadıkça gereksiz şişme oluyorsa.
+**Ana soru:** "Bu görevi daha dar bir zaman kutusuna alsam gerçekten ne olur?"
 
----
+### Zaman Kutulama
+İşi süre kutusuna hapsederek dikkat ve sınır oluşturur.
+**Ne zaman kullanılır:** Açık uçlu görevler ve erteleme sorununda.
+**Ana soru:** "Bu işe net bir zaman kutusu koyarsam karar kalitesi ve hız ne olur?"
 
-## Resilience & Antifragility
+### Üretici Takvimi ve Yönetici Takvimi
+Derin üretim blokları ile toplantı bölünmüş zaman mantığını ayırır.
+**Ne zaman kullanılır:** Dikkat parçalanıyorsa.
+**Ana soru:** "Bu takvim yapıcı iş mi istiyor, yönetici iş mi?"
 
-### Barbell Strategy
-Combine extreme safety on one side with small, high-upside bets on the other — avoid the mediocre middle.
-**Use when**: Allocating resources, investments, or career moves under deep uncertainty.
-**Key question**: "Am I protected against catastrophic downside while maintaining exposure to outsized upside?"
-
-### Skin in the Game
-People make better decisions and behave more ethically when they bear the consequences of their actions.
-**Use when**: Evaluating advisors, policies, or incentive structures.
-**Key question**: "Does this person stand to lose if they're wrong?"
-
-### Via Negativa
-Improve by removing what's harmful rather than adding what might help. Subtraction is often more powerful and less risky than addition.
-**Use when**: Improving processes, products, health, or strategies — when additive solutions keep failing.
-**Key question**: "What should I stop doing or remove, rather than what should I add?"
-
-### Hormesis
-Small doses of a stressor that would be harmful in large doses actually produce a beneficial adaptive response.
-**Use when**: Designing training, challenge, or stress exposure — calibrating the right dose.
-**Key question**: "Is this the right dose of stress to trigger adaptation without causing damage?"
+### Zorlayıcı Yapı
+İstenen davranışı mecbur kılan yapı veya çevre ayarı.
+**Ne zaman kullanılır:** İrade gücünün yetmediği alışkanlık ve süreçlerde.
+**Ana soru:** "İstenen davranışı isteğe bağlı olmaktan çıkaracak hangi yapı kurulabilir?"
 
 ---
 
-## Ethics & Responsibility
+## Oyun Teorisi ve Rekabet
 
-### Veil of Ignorance
-Design rules as if you don't know which position in the system you'll occupy — fairness emerges from impartiality.
-**Use when**: Designing policies, rules, compensation structures, or team norms.
-**Key question**: "Would I accept this arrangement if I didn't know which role I'd be assigned?"
+### Mahkûmun İkilemi
+Kısa vadeli bireysel çıkar ile uzun vadeli karşılıklı fayda çatışabilir.
+**Ne zaman kullanılır:** İşbirliği ve güven problemlerinde.
+**Ana soru:** "Bu tek seferlik bir oyun mu, tekrar eden bir oyun mu?"
 
-### Skin in the Game (Ethics)
-Symmetry of risk: those who benefit from decisions should also bear the downside. Asymmetry breeds recklessness and injustice.
-**Use when**: Evaluating whether decision-makers are accountable for consequences.
-**Key question**: "Who benefits if this goes right, and who pays if it goes wrong? Are they the same people?"
+### Nash Dengesi
+Hiçbir oyuncunun tek taraflı saparak kazançlı çıkamayacağı denge.
+**Ne zaman kullanılır:** Stratejik denge analizinde.
+**Ana soru:** "Diğerleri aynı kalırsa, benim stratejimi tek başıma değiştirmem mantıklı mı?"
+
+### Sıfır Toplamlı ve Pozitif Toplamlı
+Bazı oyunlarda birinin kazancı diğerinin kaybıdır; bazılarında toplam pasta büyür.
+**Ne zaman kullanılır:** Rekabet ve işbirliği yapısını anlamak için.
+**Ana soru:** "Bu oyun gerçekten sıfır toplamlı mı, yoksa birlikte değer üretilebilir mi?"
+
+### Asimetrik Bilgi
+Taraflardan biri diğerinden daha fazla bilgiye sahiptir.
+**Ne zaman kullanılır:** Pazarlar, müzakereler ve vekâlet ilişkilerinde.
+**Ana soru:** "Kim hangi kritik bilgiye sahip ve bunu nasıl kullanıyor?"
+
+### Mekanizma Tasarımı
+İstenilen davranışı doğuracak kural sistemini tasarlama sanatı.
+**Ne zaman kullanılır:** Teşvikler, platformlar ve kurumsal oyun kuralları tasarlarken.
+**Ana soru:** "Kuralları nasıl kurarsam insanlar arzulanan davranışı kendi çıkarları gereği seçer?"
+
+### Schelling Noktası (Odak Noktası)
+Koordinasyon gerektiren durumlarda insanların doğal olarak yöneleceği belirgin odak.
+**Ne zaman kullanılır:** Açık iletişim yokken koordinasyon gerektiğinde.
+**Ana soru:** "Tarafların doğal olarak yakınsayacağı apaçık odak noktası ne?"
+
+### Kısasa Kısas
+İşbirliğiyle başla, işbirliğine işbirliğiyle, ihlale orantılı tepkiyle karşılık ver.
+**Ne zaman kullanılır:** Tekrarlanan etkileşimlerde güven ve ceza dengesini kurarken.
+**Ana soru:** "İlk adım işbirliği olursa ve ihlal olursa orantılı geri cevap verirsem ne olur?"
+
+### Sinyalleme
+Gerçek kalite veya niyeti, maliyetli ya da doğrulanabilir işaretlerle göstermek.
+**Ne zaman kullanılır:** Güven inşa etmek veya kalitesini kanıtlamak gerektiğinde.
+**Ana soru:** "İddiamı gerçekten güvenilir biçimde hangi pahalı işaret ispatlar?"
+
+### Ahlaki Tehlike
+Kararın maliyetini başkası taşıyorsa riskli davranış artar.
+**Ne zaman kullanılır:** Sigorta, finans, yönetim ve teşvik yapılarında.
+**Ana soru:** "Riski alan ile sonucu ödeyen aynı kişi mi?"
+
+---
+
+## Müzakere
+
+### BATNA (Müzakere Edilmiş Anlaşmaya En İyi Alternatif)
+Anlaşma olmazsa sahip olduğun en iyi alternatif.
+**Ne zaman kullanılır:** Masaya oturmadan önce gücünü bilmek için.
+**Ana soru:** "Bu anlaşma olmazsa en iyi gerçek alternatifim ne?"
+
+### ZOPA (Olası Anlaşma Bölgesi)
+Tarafların kabul edebileceği aralığın kesişimi.
+**Ne zaman kullanılır:** Anlaşmanın mümkün olup olmadığını anlamak için.
+**Ana soru:** "Tarafların kabul aralıkları gerçekten kesişiyor mu?"
+
+### Taviz Takası
+Senin düşük değer verdiğin ama karşı tarafın yüksek değer verdiği konularda takas kurmak.
+**Ne zaman kullanılır:** Çok başlıklı müzakerelerde.
+**Ana soru:** "Benim için ucuz, karşı taraf için değerli olan ne var?"
+
+---
+
+## Dayanıklılık ve Antikırılganlık
+
+### Halter Stratejisi
+Aşırı güvenli taraf ile küçük ama yüksek getirili riskli tarafı birleştirmek.
+**Ne zaman kullanılır:** Orta riskli bulanık alanlardan kaçınmak istediğinde.
+**Ana soru:** "Aşağı tarafı çok güvenli tutup yukarı tarafı açık bırakacak halter yapısı ne?"
+
+### Oyunda Derisi Olmak
+Öneriyi veren, sonucun maliyetini de taşımalıdır.
+**Ne zaman kullanılır:** Tavsiye, uzmanlık ve karar güvenilirliğini değerlendirirken.
+**Ana soru:** "Bu öneriyi veren kişi sonuç kötü çıkarsa ne kaybediyor?"
+
+### Eksilterek İlerleme (Via Negativa)
+Bazen ilerleme eklemekle değil çıkarmakla olur.
+**Ne zaman kullanılır:** Karmaşa, aşırı süreç, aşırı ürün veya aşırı yük oluştuğunda.
+**Ana soru:** "Burada neyi eklemek yerine neyi çıkarmalıyım?"
+
+### Hormezis
+Doğru dozda stres, sistemi kırmak yerine güçlendirebilir.
+**Ne zaman kullanılır:** Dayanıklılık ve adaptasyon tasarlarken.
+**Ana soru:** "Bu stresten kaçmak mı gerek, yoksa doğru dozda maruz kalmak mı geliştirir?"
+
+---
+
+## Etik ve Sorumluluk
+
+### Cehalet Perdesi
+Kendi rolünü bilmeden de bu düzenlemeyi adil bulur muydun?
+**Ne zaman kullanılır:** Etik tasarım ve adalet değerlendirmelerinde.
+**Ana soru:** "Bu sistemde hangi pozisyonda olacağımı bilmeseydim yine aynı kuralı ister miydim?"
+
+### Oyunda Derisi Olmak (Etik)
+Etik açıdan da, risk üreten kişi riskin sonucuna ortak olmalıdır.
+**Ne zaman kullanılır:** Başkaları adına karar alan yapıların meşruiyetini değerlendirirken.
+**Ana soru:** "Bu kararı veren, bu kararın kötü sonuçlarına gerçekten maruz kalıyor mu?"
+
+---
+
+## İstihbarat, Güç ve Gizli Operasyonlar
+
+### Stratejik Aldatma (Deception Architecture)
+Hedefin algısını kontrol etmek için gerçek niyeti, kapasiteyi veya konumu kasıtlı olarak gizlemek ya da yanlış yönlendirmek.
+**Ne zaman kullanılır:** Müzakerede gerçek pozisyonu maskelemek, rakibin beklentilerini yönetmek veya asimetrik çatışmada hayatta kalmak gerektiğinde.
+**Ana soru:** "Karşı tarafın gerçek niyetim hakkında ne bilmesini istiyorum — ve bu algıyı nasıl şekillendiriyorum?"
+
+### Bilgi Asimetrisi Silahı
+Bir tarafın diğerinden daha fazla veya farklı türde bilgiye sahip olması durumundan bilinçli yararlanmak.
+**Ne zaman kullanılır:** Piyasa, müzakere veya çatışma ortamlarında güç dengesizliklerini okurken.
+**Ana soru:** "Bu sahada kim ne biliyor — ve bu bilgi boşluğu kimin lehine işliyor?"
+
+### Bölümlendirme (Compartmentalization)
+Bilgi ve operasyonu, her aktörün yalnızca kendi parçasını gördüğü izole hücrelere ayırmak.
+**Ne zaman kullanılır:** Hassas operasyonları korurken, sızıntı riskini minimize ederken veya çöküşü kontrol altında tutarken.
+**Ana soru:** "Bu yapıda kimin neyi bilmesi gerekiyor — ve bilgi akışını nerede kesmem şart?"
+
+### Etki Operasyonu Çerçevesi
+Bir hedef kitlenin inançlarını, davranışlarını veya kararlarını dolaylı yollarla şekillendiren uzun vadeli müdahale stratejileri.
+**Ne zaman kullanılır:** Bir anlatıyı şekillendirmek, bir topluluğun görüşünü yavaşça kaydırmak veya bir karar alma sürecini dışarıdan etkilemek gerektiğinde.
+**Ana soru:** "Bu kitleyi doğrudan değil, hangi dolaylı kanallar ve zaman dilimi üzerinden etkilemek mümkün?"
+
+### Kanlı Eller (Plausible Deniability)
+Operasyonel bir eylemi, karar vericinin buna açıkça onay vermediğini inandırıcı biçimde iddia edebileceği şekilde yapılandırmak.
+**Ne zaman kullanılır:** Yüksek riskli eylemleri yetkilendirirken doğrudan sorumluluktan kaçınmak için.
+**Ana soru:** "Bu eylem başarısız olursa, zincirin hangi halkasında duracak — ve o halka gerçekten izole mi?"
+
+### HUMINT Değerlendirme Çerçevesi (İnsan İstihbaratı)
+Bir kaynağın motivasyonunu, erişimini, güvenilirliğini ve potansiyel kompromisini sistematik olarak değerlendirmek.
+**Ne zaman kullanılır:** İnsan kaynaklarından gelen bilgiyi değerlendirirken; güvenilirlik ve sadakat sorgulanırken.
+**Ana soru:** "Bu kişinin söylediklerini doğrulayan başka ne var — ve neden bunu bana söylüyor?"
+
+### Sinyal-Gürültü Ayrımı (Intelligence Filtering)
+Ham bilgi akışından gerçek sinyal olan veriyi, yanıltıcı gürültüden ve kasıtlı dezenformasyondan ayırt etmek.
+**Ne zaman kullanılır:** Yüksek hacimli, çelişkili veya kasıtlı olarak kirletilmiş bilgi ortamlarında karar alırken.
+**Ana soru:** "Bu bilginin kaynağı kim, güdüsü ne — ve bu bana ulaştıysa neden?"
+
+### Asimetrik Kaldıraç (Leverage Under Asymmetry)
+Daha güçlü bir aktöre karşı orantısız etkisi olan kaynakları, bilgileri veya konumları tespit edip aktive etmek.
+**Ne zaman kullanılır:** Kaynak, sayı veya güç bakımından dezavantajlı konumdayken.
+**Ana soru:** "Rakibimin hassasiyetleri nerede — ve benim en küçük hamlem onun en büyük kaybını nasıl tetikler?"
+
+### Derin Kaplama (Legend Building)
+Uzun vadeli, tutarlı ve doğrulanabilir bir kimlik veya anlatı kurgusunu zaman içinde inşa etmek.
+**Ne zaman kullanılır:** Gerçek kimlik, niyet veya konumlanmanın stratejik olarak gizlenmesi gerektiğinde.
+**Ana soru:** "Bu öykü, derin incelemeye dayanacak kadar tutarlı ve desteklenmiş mi?"
+
+### İkili Kullanım Analizi (Dual-Use Assessment)
+Bir kapasite, bilgi veya teknolojinin hem meşru hem de istismar edici biçimde nasıl kullanılabileceğini eş zamanlı değerlendirmek.
+**Ne zaman kullanılır:** Yeni bir araç, sistem veya yetenek geliştirirken veya edinirken.
+**Ana soru:** "Bu aynı şeyi kim, hangi amaçla ve nasıl kötüye kullanır?"
+
+---
+
+## Makyavelist Stratejiler ve Manipülasyon
+
+### Güç Dinamikleri Haritası
+Bir sistemdeki resmi ve gayriresmi güç yapılarını, kimin kime bağımlı olduğunu ve kaldıraç noktalarını görünür kılmak.
+**Ne zaman kullanılır:** Organizasyonel bir çatışmaya girerken, bir karar alma sistemine nüfuz etmeye çalışırken veya koalisyon kurarken.
+**Ana soru:** "Kâğıt üzerindeki hiyerarşi ile gerçek güç nerede ayrışıyor — ve gayriresmi otoritenin kaynağı kim?"
+
+### Çerçeveleme Silahı (Weaponized Framing)
+Aynı gerçeği, hedefin tepkisini önceden belirleyecek şekilde farklı bir referans çerçevesiyle sunmak.
+**Ne zaman kullanılır:** İkna süreçlerinde, müzakerelerde veya bir anlatıya karşı anlatı üretirken.
+**Ana soru:** "Aynı gerçeği, karşı tarafın istediğim yönde karar almasını sağlayacak hangi çerçeveyle sunabilirim?"
+
+### Böl ve Yönet
+Bir koalisyonun veya grubun içindeki çatlakları tespit edip derinleştirerek ortak bir cephe oluşturmalarını engellemek.
+**Ne zaman kullanılır:** Birleşik bir rakiple karşı karşıyayken veya birden fazla tarafın aynı anda memnuniyetini sağlamak imkânsızken.
+**Ana soru:** "Bu grubun içindeki en derin anlaşmazlık noktası nerede — ve ben bu gerilimleri nasıl beslerim?"
+
+### Üretilmiş Konsensüs (Manufactured Consent)
+Bir görüşün geniş ve kendiliğinden bir desteğe sahipmiş gibi görünmesini sağlayacak sosyal kanıt yapısı oluşturmak.
+**Ne zaman kullanılır:** Bir kararı veya politikayı meşrulaştırmak için gerçek ya da algılanan çoğunluk desteğine ihtiyaç duyulduğunda.
+**Ana soru:** "Bu konsenüsün gerçek mi yoksa kurgulanmış mı olduğunu nasıl ayırt ederim — ve kim bu algıyı kontrol ediyor?"
+
+### Bağımlılık Yaratma (Dependency Engineering)
+Hedefi, senin kontrolündeki kaynaklara — bilgi, hizmet, ilişki, onay — giderek daha bağımlı hale getiren yapılar tasarlamak.
+**Ne zaman kullanılır:** Uzun vadeli bir ilişkide yapısal avantaj inşa etmek veya var olan bağımlılıkları fark edip kırmak gerektiğinde.
+**Ana soru:** "Bu ilişkide kim kime bağımlı — ve bu asimetriyi kim, nasıl sömürüyor?"
+
+### Kontrollü Muhalefet (Controlled Opposition)
+Muhalefetin enerjisini, yönünü veya çıktısını, görünürde bağımsız ama örtük biçimde kontrollü bir kanalda tutmak.
+**Ne zaman kullanılır:** Bir fikrin veya hareketin altını oyarken; veya kendi çevrende sahte alternatif sesler inşa eden yapıları tanımaya çalışırken.
+**Ana soru:** "Bu muhalefet, sistemi gerçekten tehdit ediyor mu — yoksa sistemi meşrulaştırmaya mı hizmet ediyor?"
+
+### Overton Penceresi Kaydırma
+Kabul edilebilir söylemin sınırlarını zaman içinde kademeli olarak genişletmek ya da kaydırmak.
+**Ne zaman kullanılır:** Bir fikrin önce aşırı, sonra tartışmalı, ardından kabul edilebilir, nihayet norm haline gelmesini takip ederken.
+**Ana soru:** "Bu fikir şu an Overton penceresinin neresinde — ve bu sınırı kim, hangi araçlarla itmekte?"
+
+### Sosyal Mühendislik Anatomisi
+İnsan psikolojisinin zafiyetlerini (güven, otorite, aciliyet, karşılıklılık) sistematik biçimde hedefleyen bir manipülasyon girişimini anatomize etmek.
+**Ne zaman kullanılır:** Bir ikna girişiminin meşru mu yoksa manipülatif mi olduğunu değerlendirirken; ya da kendi iletişimindeki baskı unsurlarını fark ederken.
+**Ana soru:** "Bu iletişim beni bir kısayoldan karar almaya mı itiyor — hangi psikolojik kaldıraç devreye giriyor?"
+
+### Karanlık Üçlü Analizi (Dark Triad Dynamics)
+Narsisizm, Makyavelizm ve psikopati özelliklerinin bir aktörün davranışını nasıl şekillendirdiğini — ve bu örüntüye karşı nasıl konumlanılacağını — okumak.
+**Ne zaman kullanılır:** Yüksek çıkarlı kişisel veya kurumsal ilişkilerde, karşı tarafın empati ve normlar konusundaki sınırlarını tahmin ederken.
+**Ana soru:** "Bu kişi normları ve kural dışı maliyetleri gerçekten içselleştirmiş mi — yoksa yalnızca faydalı olduğunda mı uyuyor?"
+
+### İtibar Silahlaştırma (Reputation as Weapon)
+Bir aktörün kamu itibarını, öz-imajını veya sosyal konumlanmasını hem saldırı hem de savunmada stratejik araç olarak kullanmak.
+**Ne zaman kullanılır:** İtibar saldırısına karşı savunurken; veya bir rakibin meşruiyetini, itibariyle çelişen gerçekler üzerinden sorgulamak gerektiğinde.
+**Ana soru:** "Bu kişinin itibarı hangi gerçeğe dayanıyor — ve o gerçeğin nerede yalanlandığını kim biliyor?"
+
+### Kelebek Etkisi Kaldıracı (Cascade Triggering)
+Bir sistemde küçük ama stratejik bir dokunuşun zincirleme, orantısız büyüklükte etkileri tetiklediği noktaları bulmak.
+**Ne zaman kullanılır:** Sınırlı kaynaklarla maksimum sistem değişikliği yaratmak için; ya da bir rakibin hangi küçük hamlelerle dengesini kaybedebileceğini haritalandırırken.
+**Ana soru:** "Bu sistemde hangi küçük hamle, kendiliğinden büyüyen bir dalgalanmayı başlatır?"

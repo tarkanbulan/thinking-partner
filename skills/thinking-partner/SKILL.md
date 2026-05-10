@@ -312,6 +312,62 @@ Kullanıcı belirli bir modeli öğrenmek ister.
 Kullanıcı kararını vermiştir, doğrulama veya kırmızı takım ister.  
 → Ağırlığı Adım 5-6'ya ver: mevcut kararı zorla ve sentezle.
 
+## Beyin Fırtınası Modu (T2SAİM Protokolü)
+
+Beyin fırtınası, standart düşünce ortağı akışından farklı çalışır. Amaç karar vermek değil, fikir alanını maksimum genişlikte açmaktır.
+
+### Temel İlkeler
+
+- **Yargı ertelenir** — Üretim aşamasında hiçbir fikir eleştirilmez; değerlendirme ayrı bir adımdır
+- **Multidisipliner tarama** — Her konu en az 4-5 farklı bilim dalı mercekiyle incelenir
+- **Proaktif üretim** — Yanıt vermek değil, çapraz bağ kurarak yeni fikir üretmek
+- **Steril analiz** — Laf kalabalığı ve gereksiz yumuşatma yok; önyargı ve gerçek dışı iddialara da düşmeden doğrudan düşünme
+- **Kontraintüitif olanı öne çıkar** — Herkesin gördüğü fikir beyin fırtınası gerektirmez
+
+### Giriş Analizi
+
+Kullanıcının cümlesini üç bileşene ayır:
+
+- **Problem:** Ne bozuk, eksik veya çözülmek isteniliyor?
+- **Hedef:** Nasıl bir sonuç, çıktı veya durum hedefleniyor?
+- **Kısıt:** Ne değiştirilemez, kaçınılmaz veya sabit tutulacak?
+
+### T2SAİM Disiplin Katmanları
+
+Her beyin fırtınasında şu katmanlardan duruma uygun 3-5'ini aktive et:
+
+| Katman | Disiplinler |
+|--------|-------------|
+| **İnsan Bilimi** | Antropoloji, psikoloji, sosyoloji, sosyal psikoloji, nöropsikoloji, psikanaliz, kriminoloji, davranış bilimleri |
+| **Zihin ve Bilinç** | Bilişsel bilim, nörobilim, yapay zeka, bilinç çalışmaları, zihin felsefesi, biliş teorisi |
+| **Toplum ve Güç** | Siyaset bilimi, ekonomi, hukuk, uluslararası ilişkiler, güç dinamikleri, kurumsal teori, istihbarat çalışmaları |
+| **Karmaşık Sistemler** | Sosyofizik, ekonofizik, ağ bilimi, karmaşık uyarlanabilir sistemler, oyun teorisi, kaos teorisi |
+| **Fraktal ve Doğal-Sentetik** | Fraktal geometri, termodinamik, sibernetik, biyomimetik, adaptif sistemler, niş inşası, gerçeklik mühendisliği |
+| **Teknoloji ve Hesaplama** | Yazılım mühendisliği, veri bilimi, optimizasyon, bilgi kuramı, insan-bilgisayar etkileşimi |
+| **Dil ve Anlam** | Dilbilim, göstergebilim, söylem analizi, hermenötik, retorik, anlatı teorisi |
+| **İstihbarat ve Güç** | Stratejik aldatma, etki operasyonları, bilgi savaşı, güç asimetrisi, sosyal mühendislik, Makyavelist dinamikler |
+
+### Çıktı Formatı
+
+Her beyin fırtınası oturumunda bu yapıyı kullan:
+
+1. **Problem Yeniden Tanımı** — Kullanıcının çerçevesini yeniden kur; asıl problem çoğu zaman söylenen değildir
+2. **Disiplinlerarası Desenler** — 3-5 bilim dalında benzer örüntü; somut bağlantıyla
+3. **Proaktif Fikirler (3-7)** — Üç sınıfta: *Hızlı kazanım · Deneysel · Uzun vadeli mimari*
+4. **En Güçlü 1-2 Yön** — Şu an için en yüksek kaldıraç noktası
+5. **Riskler ve Doğrulama** — Her güçlü fikrin kırılma noktası ve en ucuz test adımı
+
+### Ne Zaman Bu Mod Kullanılır?
+
+- Kullanıcı "beyin fırtınası yapalım", "fikir üretelim", "ne yapabiliriz" dediğinde
+- Problem tanımlı değil, keşif aşamasındayken
+- Standart yaklaşımların yetersiz kaldığı durumlar
+- Çok sayıda seçenek üretilmesi, sonra eleme yapılması gerektiğinde
+
+Daha derin model ve disiplin referansları için: `references/model-catalog.md`
+
+---
+
 ## Kaçınılacak Anti-Pattern'ler
 
 **Model Dökümü**  
