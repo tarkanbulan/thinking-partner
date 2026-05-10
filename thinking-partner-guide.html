@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Düşünce Ortağı — Kullanım Kılavuzu</title>
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --surface: #111827;
+    --surface2: #1a2234;
+    --border: #1e2d45;
+    --accent: #3b82f6;
+    --accent2: #6366f1;
+    --accent3: #10b981;
+    --accent4: #f59e0b;
+    --accent5: #ef4444;
+    --accent6: #8b5cf6;
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --text-bright: #f8fafc;
+    --ke-low: #10b981;
+    --ke-med: #f59e0b;
+    --ke-high: #ef4444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,14,26,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; gap: 0; overflow-x: auto;
+  }
+  nav a {
+    color: var(--text-dim); text-decoration: none;
+    padding: 1rem 0.9rem; font-size: 13px; white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .nav-logo { color: var(--text-bright); font-weight: 700; font-size: 15px; padding: 1rem 1rem 1rem 0; margin-right: 0.5rem; border-right: 1px solid var(--border); }
+
+  /* LAYOUT */
+  main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+
+  /* HERO */
+  .hero {
+    text-align: center; padding: 3rem 1rem 2rem;
+    background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 70%);
+    border-radius: 16px; margin-bottom: 2.5rem;
+    border: 1px solid var(--border);
+  }
+  .hero h1 { font-size: 2.4rem; font-weight: 800; color: var(--text-bright); margin-bottom: 0.5rem; }
+  .hero .sub { color: var(--text-dim); font-size: 1.05rem; max-width: 620px; margin: 0 auto 1.2rem; }
+  .badge-row { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+  .badge {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 20px; padding: 0.3rem 0.9rem; font-size: 12px; color: var(--text-dim);
+  }
+  .badge.blue { border-color: rgba(59,130,246,0.4); color: #93c5fd; }
+  .badge.green { border-color: rgba(16,185,129,0.4); color: #6ee7b7; }
+  .badge.purple { border-color: rgba(99,102,241,0.4); color: #c4b5fd; }
+
+  /* SECTIONS */
+  section { margin-bottom: 2.5rem; }
+  h2 {
+    font-size: 1.4rem; font-weight: 700; color: var(--text-bright);
+    margin-bottom: 1.2rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  h2 .icon { font-size: 1.2rem; }
+  h3 { font-size: 1.05rem; font-weight: 600; color: var(--accent); margin: 1.2rem 0 0.5rem; }
+
+  /* CARDS */
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.2rem 1.4rem; margin-bottom: 1rem;
+  }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+  .card.accent-blue { border-left: 3px solid var(--accent); }
+  .card.accent-green { border-left: 3px solid var(--accent3); }
+  .card.accent-purple { border-left: 3px solid var(--accent6); }
+  .card.accent-amber { border-left: 3px solid var(--accent4); }
+  .card.accent-red { border-left: 3px solid var(--accent5); }
+
+  /* PHILOSOPHY BOX */
+  .philosophy {
+    background: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(59,130,246,0.08) 100%);
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem;
+  }
+  .philosophy .timeline {
+    display: flex; gap: 0; margin-top: 1rem; flex-wrap: wrap;
+  }
+  .tl-item {
+    flex: 1; min-width: 160px; padding: 0.8rem 1rem;
+    background: rgba(255,255,255,0.03); border-right: 1px solid var(--border);
+    text-align: center;
+  }
+  .tl-item:last-child { border-right: none; border-radius: 0 8px 8px 0; }
+  .tl-item:first-child { border-radius: 8px 0 0 8px; }
+  .tl-era { font-size: 11px; color: var(--text-dim); margin-bottom: 0.3rem; }
+  .tl-concept { font-size: 13px; color: var(--text-bright); font-weight: 600; }
+  .tl-desc { font-size: 12px; color: var(--text-dim); margin-top: 0.2rem; }
+
+  /* GT STATES */
+  .gt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 0.8rem; }
+  .gt-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1rem 1.2rem;
+  }
+  .gt-label { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .gt0 .gt-label { color: var(--accent3); }
+  .gt1 .gt-label { color: var(--accent4); }
+  .gt2 .gt-label { color: #fb923c; }
+  .gt3 .gt-label { color: #f43f5e; }
+  .gt4 .gt-label { color: var(--accent6); }
+  .gt5 .gt-label { color: var(--accent5); }
+  .gt-name { font-size: 14px; font-weight: 600; color: var(--text-bright); margin-bottom: 0.3rem; }
+  .gt-action { font-size: 12px; color: var(--text-dim); font-style: italic; margin-top: 0.4rem; border-top: 1px solid var(--border); padding-top: 0.4rem; }
+
+  /* WORKFLOW STEPS */
+  .steps { display: flex; flex-direction: column; gap: 0; }
+  .step {
+    display: flex; gap: 1.2rem; padding: 1.2rem 1.4rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-bottom: none; position: relative;
+  }
+  .step:first-child { border-radius: 12px 12px 0 0; }
+  .step:last-child { border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--border); }
+  .step-num {
+    width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+    background: var(--accent); color: white; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; font-size: 14px;
+  }
+  .step-body h4 { color: var(--text-bright); font-size: 14px; margin-bottom: 0.3rem; }
+  .step-body p { color: var(--text-dim); font-size: 13px; }
+
+  /* KE TABLE */
+  .ke-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .ke-table th { background: var(--surface2); color: var(--text-dim); padding: 0.6rem 1rem; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .ke-table td { padding: 0.7rem 1rem; border-top: 1px solid var(--border); }
+  .ke-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .ke-band { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 11px; font-weight: 700; }
+  .ke-organic { background: rgba(16,185,129,0.15); color: var(--ke-low); }
+  .ke-low-a { background: rgba(245,158,11,0.15); color: #fcd34d; }
+  .ke-mid { background: rgba(251,146,60,0.15); color: #fb923c; }
+  .ke-high { background: rgba(239,68,68,0.15); color: var(--ke-high); }
+  .ke-critical { background: rgba(239,68,68,0.25); color: #fca5a5; font-weight: 800; }
+
+  /* PIPELINE */
+  .pipeline {
+    display: flex; align-items: center; gap: 0; flex-wrap: wrap;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.2rem; margin-bottom: 1rem;
+  }
+  .pl-node {
+    flex: 1; min-width: 80px; text-align: center; padding: 0.5rem;
+  }
+  .pl-box {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.5rem 0.4rem;
+    font-size: 12px; font-weight: 700; color: var(--accent);
+  }
+  .pl-label { font-size: 10px; color: var(--text-dim); margin-top: 0.3rem; }
+  .pl-arrow { color: var(--text-dim); font-size: 18px; padding: 0 0.2rem; flex-shrink: 0; }
+
+  /* MODULE TABLE */
+  .module-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.8rem; }
+  .module-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1rem 1.2rem;
+  }
+  .module-name { font-size: 13px; font-weight: 700; color: var(--accent2); margin-bottom: 0.3rem; }
+  .module-desc { font-size: 12px; color: var(--text-dim); margin-bottom: 0.4rem; }
+  .module-when { font-size: 11px; color: var(--accent3); font-style: italic; }
+
+  /* DISCIPLINE MAP */
+  .disc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.8rem; }
+  .disc-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 0.9rem 1rem;
+  }
+  .disc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .disc-items { font-size: 12px; color: var(--text-dim); }
+  .disc-omurga .disc-label { color: #60a5fa; }
+  .disc-insan .disc-label { color: #4ade80; }
+  .disc-toplum .disc-label { color: #fb923c; }
+  .disc-anlam .disc-label { color: #c084fc; }
+  .disc-sistem .disc-label { color: #f87171; }
+  .disc-teknik .disc-label { color: #94a3b8; }
+
+  /* ANTE-POST-DELTA */
+  .apd-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .apd-table th { background: var(--surface2); color: var(--text-dim); padding: 0.6rem 1rem; text-align: left; font-size: 11px; text-transform: uppercase; }
+  .apd-table td { padding: 0.7rem 1rem; border-top: 1px solid var(--border); vertical-align: top; }
+  .apd-ante { color: #93c5fd; }
+  .apd-post { color: #6ee7b7; }
+  .apd-delta-pos { color: #4ade80; }
+  .apd-delta-zero { color: var(--text-dim); }
+  .apd-delta-neg { color: #f87171; }
+
+  /* FORENSIC DETECTION */
+  .forensic-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent5);
+    border-radius: 10px; padding: 1.1rem 1.3rem; margin-bottom: 0.8rem;
+  }
+  .forensic-title { font-size: 14px; font-weight: 600; color: var(--text-bright); margin-bottom: 0.5rem; }
+  .forensic-row { display: grid; grid-template-columns: 90px 1fr; gap: 0.5rem; margin-bottom: 0.3rem; font-size: 12px; }
+  .forensic-key { color: var(--accent4); font-weight: 600; }
+  .forensic-val { color: var(--text-dim); }
+  .forensic-q { font-size: 12px; color: var(--accent3); font-style: italic; margin-top: 0.5rem; border-top: 1px solid var(--border); padding-top: 0.4rem; }
+
+  /* ETHICAL RULES */
+  .eth-list { list-style: none; }
+  .eth-list li {
+    display: flex; gap: 0.8rem; padding: 0.7rem 1rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-bottom: none; font-size: 13px;
+  }
+  .eth-list li:first-child { border-radius: 10px 10px 0 0; }
+  .eth-list li:last-child { border-radius: 0 0 10px 10px; border-bottom: 1px solid var(--border); }
+  .eth-num { color: var(--accent5); font-weight: 700; flex-shrink: 0; }
+  .eth-text strong { color: var(--text-bright); }
+  .eth-text { color: var(--text-dim); }
+
+  /* TRIGGERS */
+  .trigger-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .trigger-yes { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.25); border-radius: 10px; padding: 1rem; }
+  .trigger-no { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.25); border-radius: 10px; padding: 1rem; }
+  .trigger-head { font-size: 12px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+  .trigger-yes .trigger-head { color: var(--accent3); }
+  .trigger-no .trigger-head { color: var(--accent5); }
+  .trigger-list { list-style: none; }
+  .trigger-list li { font-size: 12px; color: var(--text-dim); padding: 0.25rem 0; }
+  .trigger-list li::before { content: "› "; color: var(--text-dim); }
+
+  /* MODEL TAGS */
+  .model-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .mtag {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 6px; padding: 0.2rem 0.6rem;
+    font-size: 11px; color: var(--text-dim); cursor: default;
+    transition: all 0.15s;
+  }
+  .mtag:hover { border-color: var(--accent); color: var(--accent); }
+  .mtag.featured { border-color: rgba(99,102,241,0.4); color: #a5b4fc; }
+
+  /* EPISTEMIC MATRIX */
+  .ep-matrix { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+  .ep-col {
+    padding: 1rem 1.1rem;
+    background: var(--surface); border: 1px solid var(--border); border-right: none;
+  }
+  .ep-col:last-child { border-right: 1px solid var(--border); }
+  .ep-col:first-child { border-radius: 10px 0 0 10px; }
+  .ep-col:last-child { border-radius: 0 10px 10px 0; }
+  .ep-head { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .ep-verified .ep-head { color: var(--accent3); }
+  .ep-assumed .ep-head { color: var(--accent4); }
+  .ep-unknown .ep-head { color: var(--accent5); }
+  .ep-desc { font-size: 12px; color: var(--text-dim); }
+
+  /* VALIDATION BOX */
+  .validation-box {
+    background: linear-gradient(135deg, rgba(16,185,129,0.08) 0%, rgba(59,130,246,0.08) 100%);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 12px; padding: 1.4rem; text-align: center;
+  }
+  .val-big { font-size: 2.5rem; font-weight: 800; color: var(--accent3); }
+  .val-label { font-size: 13px; color: var(--text-dim); margin-bottom: 0.5rem; }
+  .val-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; text-align: left; }
+  .val-item { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem; }
+  .val-item-label { font-size: 11px; color: var(--text-dim); margin-bottom: 0.2rem; }
+  .val-item-val { font-size: 20px; font-weight: 700; }
+  .val-tarco { color: var(--accent3); }
+  .val-yougov { color: var(--accent5); }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 2rem; color: var(--text-dim);
+    font-size: 12px; border-top: 1px solid var(--border); margin-top: 3rem;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .trigger-grid { grid-template-columns: 1fr; }
+    .ep-matrix { grid-template-columns: 1fr; }
+    .ep-col { border-right: 1px solid var(--border); border-bottom: none; border-radius: 0; }
+    .ep-col:first-child { border-radius: 10px 10px 0 0; }
+    .ep-col:last-child { border-radius: 0 0 10px 10px; border-bottom: 1px solid var(--border); }
+    .val-comparison { grid-template-columns: 1fr; }
+    .pipeline { flex-direction: column; }
+    .pl-arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">Düşünce Ortağı</span>
+  <a href="#felsefe">Felsefe</a>
+  <a href="#tetikleyiciler">Tetikleyiciler</a>
+  <a href="#yonelim">GT Teşhis</a>
+  <a href="#workflow">İş Akışı</a>
+  <a href="#modeller">Modeller</a>
+  <a href="#bfirtinasi">Beyin Fırtınası</a>
+  <a href="#t2saim">T2SAİM Modu</a>
+  <a href="#forensic">Forensic Tespit</a>
+  <a href="#etik">Etik</a>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Düşünce Ortağı</h1>
+  <p class="sub">Varsayımları sorgulayan, zihinsel modeller uygulayan ve T2SAİM ile bütünleşik forensic analiz yapabilen deterministik düşünce altyapısı.</p>
+  <div class="badge-row">
+    <span class="badge blue">19 Disiplin</span>
+    <span class="badge blue">170+ Zihinsel Model</span>
+    <span class="badge green">T2SAİM Entegre</span>
+    <span class="badge green">Forensic Tespit</span>
+    <span class="badge purple">Claude + Gemini (James)</span>
+    <span class="badge purple">Kollektif Disiplin Ağı</span>
+  </div>
+</div>
+
+<!-- KOLLEKTİF FELSEFESİ -->
+<section id="felsefe">
+  <h2><span class="icon">🌐</span> Kollektif Disiplin Felsefesi</h2>
+  <div class="philosophy">
+    <p style="color:var(--text-dim); font-size:14px; margin-bottom:1rem;">
+      Antik Yunan düşünürleri her şeyin birbirine bağlı olduğunu <em>hissedebiliyordu</em> — logos, physis, bütünlük.
+      Ama bunu operasyonelleştirecek araçları yoktu. Modern bilim bu karmaşıklığı yönetmek için <strong style="color:var(--text)">bölmek zorunda kaldı</strong>.
+      AI'ın varlığıyla bu tarihsel kısıt ortadan kalkıyor: uzmanlaşma ile bütünlük <em>aynı anda</em> mümkün.
+    </p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-era">Antik Yunan</div>
+        <div class="tl-concept">Bütünlük</div>
+        <div class="tl-desc">Her şeyin bağlı olduğu hissedildi ama operasyonelleştirilemedi</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">Modern Bilim</div>
+        <div class="tl-concept">Uzmanlaşma</div>
+        <div class="tl-desc">Bölmek zorunlu hale geldi; bütün görünmez oldu</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">AI Çağı</div>
+        <div class="tl-concept">Ağ Düşüncesi</div>
+        <div class="tl-desc">Uzmanlaşma + bütünlük aynı anda mümkün</div>
+      </div>
+    </div>
+  </div>
+  <div class="disc-grid">
+    <div class="disc-card disc-omurga">
+      <div class="disc-label">● OMURGA</div>
+      <div class="disc-items">Mantık · İstatistik · Metodoloji · Epistemoloji</div>
+    </div>
+    <div class="disc-card disc-insan">
+      <div class="disc-label">● İNSAN</div>
+      <div class="disc-items">Nöropsikoloji · Psikanaliz · Psikoloji · Bilişsel</div>
+    </div>
+    <div class="disc-card disc-toplum">
+      <div class="disc-label">● TOPLUM</div>
+      <div class="disc-items">Sosyoloji · Hukuk · Antropoloji · Ekonomi</div>
+    </div>
+    <div class="disc-card disc-anlam">
+      <div class="disc-label">● ANLAM</div>
+      <div class="disc-items">Göstergebilim · Hermenötik · Dilbilim · Söylem</div>
+    </div>
+    <div class="disc-card disc-sistem">
+      <div class="disc-label">● SİSTEM</div>
+      <div class="disc-items">Sosyofizik · Kontrol · Ağ · Oyun · Ekonofizik</div>
+    </div>
+    <div class="disc-card disc-teknik">
+      <div class="disc-label">● TEKNİK</div>
+      <div class="disc-items">AI · Bilgisayar · Veri · Yazılım · ML</div>
+    </div>
+  </div>
+</section>
+
+<!-- TETİKLEYİCİLER -->
+<section id="tetikleyiciler">
+  <h2><span class="icon">⚡</span> Tetikleyiciler</h2>
+  <div class="trigger-grid">
+    <div class="trigger-yes">
+      <div class="trigger-head">KULLAN</div>
+      <ul class="trigger-list">
+        <li>"Bunu birlikte düşünelim"</li>
+        <li>"Düşüncemi / varsayımlarımı zorla"</li>
+        <li>"Burada neyi kaçırıyorum?"</li>
+        <li>"Şeytanın avukatlığını yap"</li>
+        <li>"X ile Y arasında karar vermeme yardım et"</li>
+        <li>"İkinci derece etkiler neler?"</li>
+        <li>"Bunu doğru mu düşünüyorum?"</li>
+        <li>"Bir kararda tıkandım"</li>
+        <li>SWOT, inversion, pre-mortem, 5 Neden…</li>
+        <li>"Beyin fırtınası yapalım"</li>
+        <li>Manipülasyon / güç dinamiği şüphesi</li>
+      </ul>
+    </div>
+    <div class="trigger-no">
+      <div class="trigger-head">KULLANMA</div>
+      <ul class="trigger-list">
+        <li>Hızlı olgusal soru ("Python'da nasıl?)"</li>
+        <li>Sadece duygusal destek aranıyorsa</li>
+        <li>Tamamen teknik, belirsizlik yok</li>
+        <li>Belirli bir çıktı isteniyor (kod, liste)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- YÖNELİM TEŞHİSİ -->
+<section id="yonelim">
+  <h2><span class="icon">🧭</span> GT Yönelim Teşhisi</h2>
+  <p style="color:var(--text-dim); font-size:13px; margin-bottom:1rem;">Model seçmeden önce kullanıcının düşünme durumunu sessizce teşhis et. Yaklaşımını bu belirler.</p>
+  <div class="gt-grid">
+    <div class="gt-card gt0">
+      <div class="gt-label">GT0 — SÜREÇ-EGEMEN</div>
+      <div class="gt-name">Sağlıklı Keşif</div>
+      <p style="font-size:12px;color:var(--text-dim);">Kullanıcı gerçekten keşfediyor, yanılmaya açık. Kanıt değiştiğinde sonucu da değiştiriyor.</p>
+      <div class="gt-action">→ İşbirlikçi ortak ol. Modeller öner, birlikte keşfet.</div>
+    </div>
+    <div class="gt-card gt1">
+      <div class="gt-label">GT1 — SONUCU-KORUYAN</div>
+      <div class="gt-name">Onay Arıyor</div>
+      <p style="font-size:12px;color:var(--text-dim);">Çoktan karar vermiş ve onay arıyor. Aleyhteki kanıtı açıklayıp geçiyor.</p>
+      <div class="gt-action">→ "Y'nin daha iyi seçenek olması için neyin doğru olması gerekirdi?"</div>
+    </div>
+    <div class="gt-card gt2">
+      <div class="gt-label">GT2 — OTORİTEYİ-KORUYAN</div>
+      <div class="gt-name">Uzman Görünmek</div>
+      <p style="font-size:12px;color:var(--text-dim);">Doğru olmaktan çok uzman görünmeye bağlı.</p>
+      <div class="gt-action">→ "Bunu sanki başkasına danışmanlık veriyormuşuz gibi birlikte zorlayalım."</div>
+    </div>
+    <div class="gt-card gt3">
+      <div class="gt-label">GT3 — TEHDİDİ-AZALTAN</div>
+      <div class="gt-name">Rahatsızlıktan Kaçış</div>
+      <p style="font-size:12px;color:var(--text-dim);">Netliği değil, rahatsızlığı hızla azaltmayı istiyor.</p>
+      <div class="gt-action">→ "Şu an karar verme baskısı yok. İki seçeneği daha sakin bakalım."</div>
+    </div>
+    <div class="gt-card gt4">
+      <div class="gt-label">GT4 — TAMAMLANMA-ARAYAN</div>
+      <div class="gt-name">Hızlı Kapanış</div>
+      <p style="font-size:12px;color:var(--text-dim);">Doğru cevabı değil, bir cevabı istiyor.</p>
+      <div class="gt-action">→ "Kapatmadan önce bir açıdan daha zorlayayım; ayakta kalıyor mu?"</div>
+    </div>
+    <div class="gt-card gt5">
+      <div class="gt-label">GT5 — İZLEME ELE GEÇİRİLMİŞ</div>
+      <div class="gt-name">Döngüsel Analiz</div>
+      <p style="font-size:12px;color:var(--text-dim);">Çok analiz yapıyor ama analiz hep aynı sonucu doğruluyor.</p>
+      <div class="gt-action">→ "Bu görüş hangi somut öngörüyü yapıyor? Bunu nasıl sınarız?"</div>
+    </div>
+  </div>
+</section>
+
+<!-- İŞ AKIŞI -->
+<section id="workflow">
+  <h2><span class="icon">⚙️</span> 6-Adım İş Akışı</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>Durumu Anla</h4>
+        <p>Risk ne? Zaman ufku ne? Kısıtlar? — Belirsizse tek soru sor, yığın yapma.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>Yönelimi Teşhis Et (GT0–GT5)</h4>
+        <p>Model seçmeden önce düşünme durumunu sessizce oku. Yaklaşım buna göre şekillenir.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>2-3 Zihinsel Model Seç</h4>
+        <p>Duruma uygun modelleri seç. Her model için tek satırlık tanım + neden önerdiğini söyle.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h4>Modelleri Uygula</h4>
+        <p>Adlandır → ana soru sor → dinle → gerektiğinde zorla → sentez yap.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <h4>Zorla ve Stres Testi Yap</h4>
+        <p>"Ya tam tersi doğruysa?" · Pre-mortem · Kör nokta · Güven kalibrasyonu · Oyunda deri testi.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-body">
+        <h4>Sentez ve Kapanış</h4>
+        <p>Ana içgörü → Karar/sonraki adım → İzlenecek varsayımlar → En işe yarayan model.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELLER -->
+<section id="modeller">
+  <h2><span class="icon">🧠</span> Zihinsel Model Kategorileri</h2>
+  <div class="card-grid">
+    <div class="card accent-blue">
+      <h3>Kararlar</h3>
+      <div class="model-tags">
+        <span class="mtag">Tersine Çevirme</span><span class="mtag">İkinci Derece</span>
+        <span class="mtag">Pre-Mortem</span><span class="mtag">10/10/10</span>
+        <span class="mtag">Pişmanlığı Min.</span><span class="mtag">Geri Döndürülebilirlik</span>
+        <span class="mtag featured">BATNA</span><span class="mtag">Asimetrik Risk</span>
+        <span class="mtag">Opsiyonelliği Koruma</span>
+      </div>
+    </div>
+    <div class="card accent-blue">
+      <h3>Problem Çözme</h3>
+      <div class="model-tags">
+        <span class="mtag featured">İlk Prensipler</span><span class="mtag">5 Neden</span>
+        <span class="mtag">Balık Kılçığı</span><span class="mtag">MECE</span>
+        <span class="mtag">Kısıt Analizi</span><span class="mtag">Yeniden Çerçeveleme</span>
+        <span class="mtag">Aydınlık Noktalar</span><span class="mtag">Hipotez Tabanlı</span>
+      </div>
+    </div>
+    <div class="card accent-blue">
+      <h3>Strateji ve Planlama</h3>
+      <div class="model-tags">
+        <span class="mtag">SWOT</span><span class="mtag">Senaryo Planlama</span>
+        <span class="mtag">Porter 5 Güç</span><span class="mtag featured">Kırmızı Takım</span>
+        <span class="mtag">Güvenlik Marjı</span><span class="mtag">Chesterton Çiti</span>
+        <span class="mtag">Lindy Etkisi</span><span class="mtag">Asil-Vekil</span>
+      </div>
+    </div>
+    <div class="card accent-blue">
+      <h3>İddia ve Kanıt</h3>
+      <div class="model-tags">
+        <span class="mtag featured">Bayesyen Güncelleme</span><span class="mtag">Yanlışlanabilirlik</span>
+        <span class="mtag">Taban Oran</span><span class="mtag">Hayatta Kalma Yanılgısı</span>
+        <span class="mtag">Korelasyon≠Nedensellik</span><span class="mtag">Seçim Yanlılığı</span>
+      </div>
+    </div>
+    <div class="card accent-blue">
+      <h3>Sistemler ve Dinamikler</h3>
+      <div class="model-tags">
+        <span class="mtag">Geri Besleme Döngüleri</span><span class="mtag">Stoklar ve Akışlar</span>
+        <span class="mtag">Kırılma Noktaları</span><span class="mtag">Antikırılganlık</span>
+        <span class="mtag">Kaldıraç Noktaları</span><span class="mtag">Yol Bağımlılığı</span>
+      </div>
+    </div>
+    <div class="card accent-blue">
+      <h3>Yaratıcılık ve Tıkanıklık</h3>
+      <div class="model-tags">
+        <span class="mtag">Tersine Çevirme</span><span class="mtag">SCAMPER</span>
+        <span class="mtag">Benzetimsel Akıl</span><span class="mtag">Kısıtı Kaldırma</span>
+        <span class="mtag">Eğik Stratejiler</span><span class="mtag">Min. Uygulanabilir Deney</span>
+      </div>
+    </div>
+    <div class="card accent-green">
+      <h3>Güç, İstihbarat ve Etki Tespiti</h3>
+      <div class="model-tags">
+        <span class="mtag featured">Stratejik Aldatma Tespiti</span>
+        <span class="mtag featured">Bilgi Asimetrisi Tespiti</span>
+        <span class="mtag featured">Etki Operasyonu Belirtileri</span>
+        <span class="mtag featured">Güç Haritası Okuma</span>
+        <span class="mtag featured">Üretilmiş Konsensüs Tespiti</span>
+        <span class="mtag featured">Sosyal Mühendislik Anatomisi</span>
+      </div>
+      <p style="font-size:11px;color:var(--accent5);margin-top:0.5rem;">KE &gt; 0.41 → T2SAİM Analiz Moduna eskalasyon</p>
+    </div>
+    <div class="card accent-blue">
+      <h3>İletişim ve İkna · Müzakere · Etik</h3>
+      <div class="model-tags">
+        <span class="mtag">Çelikleştirme</span><span class="mtag">Piramit İlkesi</span>
+        <span class="mtag">BATNA</span><span class="mtag">ZOPA</span>
+        <span class="mtag">Logrolling</span><span class="mtag">Cehalet Perdesi</span>
+        <span class="mtag">Feynman Tekniği</span>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--text-dim);margin-top:0.8rem;">Tam katalog: <code style="color:var(--accent)">references/model-catalog.md</code> — 19 disiplin, 170+ model</p>
+</section>
+
+<!-- BEYİN FIRTINASI -->
+<section id="bfirtinasi">
+  <h2><span class="icon">💡</span> Beyin Fırtınası Modu (T2SAİM Protokolü)</h2>
+  <div class="card accent-purple" style="margin-bottom:1rem;">
+    <p style="font-size:13px;color:var(--text-dim);">Standart düşünce ortağı akışından farklı — amaç karar vermek değil, fikir alanını maksimum genişlikte açmak. <strong style="color:var(--text)">Yargı ertelenir.</strong> Multidisipliner tarama. Proaktif üretim. Steril analiz — gereksiz yumuşatma yok.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Giriş Analizi</h3>
+      <p style="font-size:13px;color:var(--text-dim);"><strong style="color:var(--text)">Problem:</strong> Ne bozuk, eksik veya çözülmek isteniyor?<br>
+      <strong style="color:var(--text)">Hedef:</strong> Nasıl bir sonuç, çıktı veya durum?<br>
+      <strong style="color:var(--text)">Kısıt:</strong> Ne değiştirilemez veya sabit tutulacak?</p>
+    </div>
+    <div class="card">
+      <h3>Çıktı Yapısı</h3>
+      <ol style="font-size:13px;color:var(--text-dim);padding-left:1.2rem;">
+        <li>Problem Yeniden Tanımı</li>
+        <li>Disiplinlerarası Desenler (3-5 dal)</li>
+        <li>Proaktif Fikirler (3-7): Hızlı · Deneysel · Uzun vadeli</li>
+        <li>En Güçlü 1-2 Yön</li>
+        <li>Riskler ve Doğrulama</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- T2SAİM ANALİZ MODU -->
+<section id="t2saim">
+  <h2><span class="icon">🔬</span> T2SAİM Analiz Modu</h2>
+  <p style="color:var(--text-dim);font-size:13px;margin-bottom:1.2rem;">Standart zihinsel modeller sezgisel analiz için yeterlidir. Sorun forensic yapıya kavuştuğunda — gerçek anomali, manipülasyon, sentetik örüntü şüphesi — T2SAİM protokolüne eskalasyon gerekir.</p>
+
+  <!-- VALIDATION -->
+  <div class="validation-box" style="margin-bottom:1.5rem;">
+    <div class="val-label">UK Yerel Seçimler — 7 Mayıs 2026 — Reform UK Tahmini</div>
+    <div class="val-big">0.34 puan</div>
+    <div style="color:var(--text-dim);font-size:13px;margin-top:0.3rem;">TarCo sapması · 7 ticari firma 1 puana dahi yaklaşamadı</div>
+    <div class="val-comparison">
+      <div class="val-item">
+        <div class="val-item-label">TarCo sapması</div>
+        <div class="val-item-val val-tarco">0.34 puan</div>
+      </div>
+      <div class="val-item">
+        <div class="val-item-label">YouGov sapması</div>
+        <div class="val-item-val val-yougov">4.34 puan</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIPELINE -->
+  <h3>Analiz Zinciri</h3>
+  <div class="pipeline">
+    <div class="pl-node"><div class="pl-box">LM-CONTEXT</div><div class="pl-label">Bağlam Kapısı</div></div>
+    <div class="pl-arrow">→</div>
+    <div class="pl-node"><div class="pl-box">LM-1</div><div class="pl-label">Kriminal Zaman</div></div>
+    <div class="pl-arrow">→</div>
+    <div class="pl-node"><div class="pl-box">LM-2</div><div class="pl-label">İlişki Ağı</div></div>
+    <div class="pl-arrow">→</div>
+    <div class="pl-node"><div class="pl-box">LM-3</div><div class="pl-label">Linguistik</div></div>
+    <div class="pl-arrow">→</div>
+    <div class="pl-node"><div class="pl-box" style="color:var(--accent3)">KE</div><div class="pl-label">Kompozit Skor</div></div>
+    <div class="pl-arrow">→</div>
+    <div class="pl-node"><div class="pl-box" style="color:var(--accent4)">Uzman</div><div class="pl-label">Seçilmiş Modül</div></div>
+  </div>
+
+  <!-- KE FORMULA -->
+  <div class="card" style="margin-bottom:1rem;">
+    <h3>KE Formülü</h3>
+    <p style="font-family:monospace;font-size:16px;color:var(--accent3);margin:0.6rem 0;text-align:center;">KE = (0.40 × ZTJ) + (0.30 × IUY) + (0.30 × SST)</p>
+    <table class="ke-table">
+      <tr><th>KE Aralığı</th><th>Yorum</th><th>Aksiyon</th></tr>
+      <tr><td>0.00 – 0.20</td><td><span class="ke-band ke-organic">Organik</span></td><td style="color:var(--text-dim)">Standart izleme</td></tr>
+      <tr><td>0.21 – 0.40</td><td><span class="ke-band ke-low-a">Düşük Anomali</span></td><td style="color:var(--text-dim)">Çapraz doğrulama</td></tr>
+      <tr><td>0.41 – 0.60</td><td><span class="ke-band ke-mid">Orta Anomali</span></td><td style="color:var(--text-dim)">Derinleştir</td></tr>
+      <tr><td>0.61 – 0.80</td><td><span class="ke-band ke-high">Yüksek Anomali</span></td><td style="color:var(--text-dim)">Red Team zorunlu</td></tr>
+      <tr><td>0.81 – 1.00</td><td><span class="ke-band ke-critical">Kritik</span></td><td style="color:var(--text-dim)">VETO değerlendirmesi</td></tr>
+    </table>
+  </div>
+
+  <!-- MODULES -->
+  <h3>Uzman Modüller</h3>
+  <div class="module-grid">
+    <div class="module-card">
+      <div class="module-name">LM-4 PSYOP</div>
+      <div class="module-desc">Toplumsal manipülasyon, etki operasyonları, anlatı mühendisliği</div>
+      <div class="module-when">Söylem anomalisi, kitle yönlendirme şüphesi</div>
+    </div>
+    <div class="module-card">
+      <div class="module-name">LM-5 Rüşvet</div>
+      <div class="module-desc">Rüşvet ve yolsuzluk örüntüleri, RÖS skoru</div>
+      <div class="module-when">Mali akış ile karar uyumsuzluğu</div>
+    </div>
+    <div class="module-card">
+      <div class="module-name">LM-MDAM</div>
+      <div class="module-desc">Manipülasyon tespit metodolojisi (MD-1+MD-2+MD-3)</div>
+      <div class="module-when">Bireysel ya da kurumsal manipülasyon</div>
+    </div>
+    <div class="module-card">
+      <div class="module-name">LM-BIGA</div>
+      <div class="module-desc">Tarihsel-stratejik faz analizi, EWS erken uyarı</div>
+      <div class="module-when">Uzun dönem örüntü, sistem fazı tespiti</div>
+    </div>
+    <div class="module-card">
+      <div class="module-name">LM-ECON DARON</div>
+      <div class="module-desc">Kurumsal ekonomi, E=1/(1+KE), IDIS skoru</div>
+      <div class="module-when">Kurumsal çöküş, kaynak sömürüsü</div>
+    </div>
+    <div class="module-card">
+      <div class="module-name">LM-TarcoMap</div>
+      <div class="module-desc">Stratejik tahmin, kolektif yargı, LAMP senaryo matrisi</div>
+      <div class="module-when">Gelecek öngörüsü, senaryo analizi</div>
+    </div>
+  </div>
+
+  <!-- ANTE-POST-DELTA -->
+  <h3 style="margin-top:1.4rem;">Ante–Post–Delta Çıktı Formatı</h3>
+  <div class="card">
+    <table class="apd-table">
+      <tr><th>Eksen</th><th>Ante (Öngörü)</th><th>Post (Gerçekleşen)</th><th>Delta</th></tr>
+      <tr>
+        <td>Reform UK oy oranı</td>
+        <td class="apd-ante">%29 (ortalama)</td>
+        <td class="apd-post">%29.34 (gerçek)</td>
+        <td class="apd-delta-pos">+ Yapısal tez doğrulandı</td>
+      </tr>
+      <tr>
+        <td>NOC oranı İngiltere</td>
+        <td class="apd-ante">%63.22 (99% CI: 51.4–74.8)</td>
+        <td class="apd-post">~%62–64</td>
+        <td class="apd-delta-zero">≈ Model aralığı içinde kaldı</td>
+      </tr>
+      <tr>
+        <td>Galler: Plaid Cymru</td>
+        <td class="apd-ante">Birinci, Labour baskı altında</td>
+        <td class="apd-post">Plaid birinci, Labour tarihi düşük</td>
+        <td class="apd-delta-pos">+ Yön tam örtüştü</td>
+      </tr>
+      <tr>
+        <td>Yeşiller oy oranı</td>
+        <td class="apd-ante">%7 ort. (90% üst kuyruk ~%9.5)</td>
+        <td class="apd-post">%11.71</td>
+        <td class="apd-delta-neg">− Kuyruk 2.2 puan aşıldı (eko-protestyo yeniden ağırlıklandırma)</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- EPİSTEMİK MATRİS -->
+  <h3>Epistemic Hijyen Kapanışı</h3>
+  <div class="ep-matrix">
+    <div class="ep-col ep-verified">
+      <div class="ep-head">BİLDİĞİM (Verified)</div>
+      <div class="ep-desc">Kanıtlı, gözlemlenebilir olgular. Birden fazla bağımsız kaynakla doğrulanmış.</div>
+    </div>
+    <div class="ep-col ep-assumed">
+      <div class="ep-head">VARSAYDIM (Assumed)</div>
+      <div class="ep-desc">Mantıksal çıkarım, niyet okumaları. Kanıt değil, çıkarım.</div>
+    </div>
+    <div class="ep-col ep-unknown">
+      <div class="ep-head">DOĞRULAYAMADİM (Unverified)</div>
+      <div class="ep-desc">Bilinmeyenler, veri boşlukları. Henüz kanıtlanmamış veya kanıtlanamaz.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORENSİC TESPİT -->
+<section id="forensic">
+  <h2><span class="icon">🔍</span> Forensic Tespit Modelleri (Bölüm 18–19)</h2>
+  <p style="color:var(--text-dim);font-size:13px;margin-bottom:1rem;">Bu modeller <em>nasıl yapıldığını</em> değil, <em>yapıldığının nasıl tespit edildiğini</em> gösterir. İçeriden his + dışarıdan iz + efektten sebebe giden abductive soru.</p>
+
+  <h3 style="color:var(--accent5);">İstihbarat ve Güç (Bölüm 18)</h3>
+  <div class="forensic-card">
+    <div class="forensic-title">Stratejik Aldatma Tespiti</div>
+    <div class="forensic-row"><span class="forensic-key">İçeriden:</span><span class="forensic-val">Verilen bilgi tutarlı görünüyor ama "peki bu neden böyle?" sorusu hep yanıtsız kalıyor.</span></div>
+    <div class="forensic-row"><span class="forensic-key">Bıraktığı iz:</span><span class="forensic-val">Açıklanan eylem ile çıkan sonuç arasındaki fark sistematik — hata değil, desen.</span></div>
+    <div class="forensic-q">→ "Söyledikleri ile yaptıkları arasında sürekli aynı yönde açı farkı var mı?"</div>
+  </div>
+  <div class="forensic-card">
+    <div class="forensic-title">Etki Operasyonu Belirtileri</div>
+    <div class="forensic-row"><span class="forensic-key">İçeriden:</span><span class="forensic-val">Bu fikri ne zaman düşünmeye başladığını hatırlamıyorsun ama "zaten hep böyle düşünüyordum" hissi var.</span></div>
+    <div class="forensic-row"><span class="forensic-key">Bıraktığı iz:</span><span class="forensic-val">Çevredeki görüşler bağımsız görünüyor ama hepsi aynı yönde kayıyor, aynı kaynaktan besleniyor.</span></div>
+    <div class="forensic-q">→ "Bu fikri kendi başıma mı ürettim, yoksa belirli kanallar üzerinden sistematik olarak mı ulaştı?"</div>
+  </div>
+
+  <h3 style="color:var(--accent5);margin-top:1.4rem;">Makyavelist Stratejiler (Bölüm 19)</h3>
+  <div class="forensic-card">
+    <div class="forensic-title">Üretilmiş Konsensüs Tespiti</div>
+    <div class="forensic-row"><span class="forensic-key">İçeriden:</span><span class="forensic-val">"Herkes böyle düşünüyor" baskısı var ama bu herkesi tanıyor musun? Karşı çıkmak giderek daha yalnız hissettiriyor.</span></div>
+    <div class="forensic-row"><span class="forensic-key">Bıraktığı iz:</span><span class="forensic-val">Destek geniş görünüyor ama bağımsız değil — aynı söylemi kullananlar aynı kaynaktan besleniyorlar.</span></div>
+    <div class="forensic-q">→ "Bu konsensüsün katılımcıları birbirinden gerçekten bağımsız mı?"</div>
+  </div>
+  <div class="forensic-card">
+    <div class="forensic-title">Bağımlılık Yapısı Tespiti</div>
+    <div class="forensic-row"><span class="forensic-key">İçeriden:</span><span class="forensic-val">Kalmak doğal geliyor; çıkmak orantısız büyük kayıp gibi görünüyor. Bu his zamanla büyüdü, ne zaman başladı hatırlanmıyor.</span></div>
+    <div class="forensic-row"><span class="forensic-key">Bıraktığı iz:</span><span class="forensic-val">Seçenekler zaman içinde azaldı. Alternatiflere yatırım için fırsatlar hep ertelendi. Çıkış yok — ama bu tesadüf değil, tasarım.</span></div>
+    <div class="forensic-q">→ "Bu maliyet organik mi birikmedi, yoksa bilerek mi yaratıldı?"</div>
+  </div>
+  <div class="forensic-card">
+    <div class="forensic-title">Overton Kayması Tespiti</div>
+    <div class="forensic-row"><span class="forensic-key">İçeriden:</span><span class="forensic-val">Bir yıl önce "asla" diyeceğin bir şeyi şimdi sıradan buluyorsun. Ne zaman değişti, hatırlamıyorsun.</span></div>
+    <div class="forensic-row"><span class="forensic-key">Bıraktığı iz:</span><span class="forensic-val">Sınır kademeli kaydı. Her adım küçüktü ve makul gerekçeyle geldi. Ama birleşik etki büyük.</span></div>
+    <div class="forensic-q">→ "Bir yıl önceki ben, şu an kabul ettiğim bu şeye ne derdi?"</div>
+  </div>
+  <p style="font-size:12px;color:var(--text-dim);margin-top:0.8rem;">Tüm 21 tespit modeli: <code style="color:var(--accent)">references/model-catalog.md</code> — Bölüm 18 ve 19</p>
+</section>
+
+<!-- ETİK KURALLAR -->
+<section id="etik">
+  <h2><span class="icon">⚖️</span> Değiştirilemez Etik Kılavuzlar</h2>
+  <ul class="eth-list">
+    <li>
+      <span class="eth-num">1</span>
+      <span class="eth-text"><strong>Niyet isnadı yasak</strong> — "X yaptı/planladı/amaçladı" formatı kullanılamaz. Yalnızca gözlemlenebilir örüntüler raporlanır.</span>
+    </li>
+    <li>
+      <span class="eth-num">2</span>
+      <span class="eth-text"><strong>Tek kaynak yasak</strong> — Minimum 3 bağımsız kaynak zorunludur.</span>
+    </li>
+    <li>
+      <span class="eth-num">3</span>
+      <span class="eth-text"><strong>Ontolojik Veto</strong> — Fiziksel ya da mantıksal imkânsızlık varsa KE = 0.0, analiz durur.</span>
+    </li>
+    <li>
+      <span class="eth-num">4</span>
+      <span class="eth-text"><strong>Red Team zorunlu</strong> — Her analizde H1 organik/tesadüfi hipotez açıkça test edilir.</span>
+    </li>
+  </ul>
+
+  <div class="card" style="margin-top:1.5rem;border-color:rgba(99,102,241,0.3);">
+    <h3 style="color:var(--accent6);">Anti-Pattern'ler</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.6rem;margin-top:0.5rem;">
+      <div style="font-size:12px;color:var(--text-dim);padding:0.5rem;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:6px;">
+        <strong style="color:#f87171;">Model Dökümü</strong><br>15 modeli sıralayıp hiçbirini uygulamamak
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding:0.5rem;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:6px;">
+        <strong style="color:#f87171;">Yanlılık Tokadı</strong><br>"Bu onaylama yanlılığı" demek — yerine alternatif kanıt sor
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding:0.5rem;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:6px;">
+        <strong style="color:#f87171;">Sofistikasyon Tuzağı</strong><br>Kötü yönelim altında daha fazla analiz = daha iyi savunulmuş yanlış cevap
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding:0.5rem;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:6px;">
+        <strong style="color:#f87171;">Erken Kapanış</strong><br>Karmaşık problemde temiz cevaba erken sıçramak
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Düşünce Ortağı Kullanım Kılavuzu · Claude + Gemini (James) · T2SAİM Entegre · 19 Disiplin · 170+ Model<br>
+  <span style="color:#374151;margin-top:0.3rem;display:block;">TarCo Forensic Analytics & Epistemic Security</span>
+</footer>
+
+</body>
+</html>
