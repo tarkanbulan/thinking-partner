@@ -846,6 +846,8 @@ Etik açıdan da, risk üreten kişi riskin sonucuna ortak olmalıdır.
 
 ## İstihbarat, Güç ve Gizli Operasyonlar
 
+> **T2SAİM Protokol Bağlantısı:** Bu bölümdeki modeller thinking-partner düzeyinde sezgisel tespit araçlarıdır. Forensic düzeyde skorlanmış analiz için eskalasyon: **LM-4 PSYOP** (anlatı/etki operasyonları), **LM-MDAM** (manipülasyon metodolojisi), **LM-2** (ilişki ağı ve mali akış). KE skoru 0.41'i geçtiğinde T2SAİM Analiz Modu zorunludur.
+
 > **Okuma çerçevesi:** Bu bölümdeki modeller, bir şeyin *nasıl yapıldığını* değil, *yapıldığını nasıl tespit ettiğimizi* gösterir. Her model üç katmanda okunur: içeriden nasıl hissettiriyor, dışarıdan hangi izi bırakıyor, ve efektten sebebe nasıl geriye gidilir.
 
 ### Stratejik Aldatma Tespiti
@@ -911,6 +913,8 @@ Meşru görünen bir araç, kapasite veya ilişkinin aynı anda seni zayıflatan
 ---
 
 ## Makyavelist Stratejiler ve Manipülasyon
+
+> **T2SAİM Protokol Bağlantısı:** Bu bölümdeki modeller thinking-partner düzeyinde davranışsal tespit araçlarıdır. Güç yapılarının sistematik haritalaması için **LM-2** (ilişki ağı), söylem analizi için **LM-3** (linguistik), etki operasyonu ve PSYOP için **LM-4**, kişisel manipülasyon tespiti için **LM-MDAM**. CTX-06 (Manipülasyon) ağırlık seti: ZTJ 0.25, IUY 0.35, SST 0.40.
 
 > **Okuma çerçevesi:** Bu bölüm, güç ve manipülasyonun *nasıl uygulandığını* değil, *uygulandığında nasıl tespit edildiğini* gösterir. Teşhis içeriden hissedilen şey + dışarıdan gözlemlenen iz üzerinden yapılır. Soru her zaman şudur: efektlere bakarak, görünmez sebebi nasıl çıkarırız?
 
